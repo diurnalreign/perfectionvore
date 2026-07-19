@@ -23,11 +23,11 @@ npm run build    # build de producción a /dist
 npm run preview  # previsualiza el build
 ```
 
-## Despliegue (GitHub Pages)
+## Despliegue (GitHub Pages + dominio propio)
 
 El sitio está publicado en:
 
-**🔗 https://diurnalreign.github.io/perfectionvore/**
+**🔗 https://perfectionvore.com**
 
 El despliegue es **automático**: cada `push` a la rama `main` dispara el workflow
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), que construye el sitio con
@@ -35,15 +35,18 @@ Vite y lo publica en GitHub Pages. No hay pasos manuales.
 
 Detalles:
 
-- Como es un *project site*, la app se sirve bajo el subpath `/perfectionvore/`. Por eso
-  `vite.config.ts` fija `base: '/perfectionvore/'` y las rutas a `public/` se resuelven con
-  `import.meta.env.BASE_URL` (ver `src/components/HeroSection.tsx`).
+- Se sirve en el **dominio propio** `perfectionvore.com` (apex), por eso `vite.config.ts`
+  fija `base: '/'` y las rutas a `public/` se resuelven con `import.meta.env.BASE_URL`.
+- El dominio se declara en [`public/CNAME`](public/CNAME) (GitHub Pages lo lee del artefacto).
 - La fuente de Pages está configurada en **Settings → Pages → Source: "GitHub Actions"**.
-- También se puede lanzar a mano desde la pestaña **Actions → Deploy to GitHub Pages →
-  Run workflow** (el workflow acepta `workflow_dispatch`).
 
-> Si cambias el nombre del repositorio o lo mueves a otra cuenta/organización, actualiza el
-> `base` en `vite.config.ts` para que coincida con el nuevo subpath.
+### DNS del dominio (en tu registrador)
+
+- **Apex** `perfectionvore.com` → cuatro registros **A** a GitHub Pages:
+  `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+  (opcional IPv6 **AAAA**: `2606:50c0:8000::153` … `8003::153`).
+- **www** `www.perfectionvore.com` → registro **CNAME** a `diurnalreign.github.io`.
+- En **Settings → Pages** activa **Enforce HTTPS** cuando el certificado esté listo.
 
 ## Estructura
 

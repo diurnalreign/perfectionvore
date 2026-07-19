@@ -7,17 +7,16 @@
    en `public/assets/fonts/`. Mientras no exista, el navegador cae en Oswald,
    así que la web nunca se rompe. Formatos aceptados: .woff2 (ideal) o .ttf.
 
-   OJO con el subpath: Vite NO antepone `base` a las url() de CSS que apuntan a
-   `public/`, así que la ruta incluye `/perfectionvore/` a mano. Si cambias el
-   `base` en vite.config.ts (p. ej. otro nombre de repo), actualiza también
-   este prefijo. En dev/preview también se sirve bajo ese base, así que funciona
-   igual en local.
+   La ruta parte de la raíz porque el sitio se sirve en el dominio propio
+   (perfectionvore.com), es decir, base '/'. Si algún día vuelves a servir bajo
+   un subpath (p. ej. /perfectionvore/ en github.io), antepón ese prefijo aquí,
+   porque Vite NO añade `base` a las url() de CSS que apuntan a `public/`.
    ========================================================================== */
 @font-face {
   font-family: 'True Lies';
   src:
-    url('/perfectionvore/assets/fonts/true-lies.woff2') format('woff2'),
-    url('/perfectionvore/assets/fonts/true-lies.ttf') format('truetype');
+    url('/assets/fonts/true-lies.woff2') format('woff2'),
+    url('/assets/fonts/true-lies.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
