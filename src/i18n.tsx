@@ -115,8 +115,8 @@ const UI = {
     en: '🏆 Champions · Campus Party Quito 2012',
   },
   'champions.caption': {
-    es: 'El quinteto de pvore tras ganar el primer lugar ($1,800) en Counter-Strike 1.6. De izquierda a derecha: skei, Shaquille, vaz, LEWKZ y NiwdE.',
-    en: "pvore's five after winning first place ($1,800) in Counter-Strike 1.6. Left to right: skei, Shaquille, vaz, LEWKZ and NiwdE.",
+    es: 'El quinteto de pvore tras ganar el primer lugar ($1,800) en Counter-Strike 1.6. skei, Shaquille, vaz, LEWKZ, NiwdE.',
+    en: "pvore's five after winning first place ($1,800) in Counter-Strike 1.6. skei, Shaquille, vaz, LEWKZ, NiwdE.",
   },
   'champions.alt': {
     es: 'El roster de Perfectionvore sostiene el cheque de primer lugar ($1,800) en Campus Party Quito 2012.',
