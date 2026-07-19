@@ -43,11 +43,6 @@ const UI = {
     es: 'Team USA en el WCG Panamericano 2012 (Chile), dirigido por vaz',
     en: 'Team USA at WCG Pan-American 2012 (Chile), managed by vaz',
   },
-  'gallery.venezuela16': {
-    es: 'La escena del Counter-Strike 1.6 venezolano',
-    en: 'The Venezuelan Counter-Strike 1.6 scene',
-  },
-  'gallery.poster': { es: 'Arte de Perfectionvore', en: 'Perfectionvore artwork' },
 
   'hero.introPre': { es: 'Preservamos la memoria de ', en: 'We preserve the memory of ' },
   'hero.introPost': {

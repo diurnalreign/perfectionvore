@@ -6,8 +6,6 @@ const base = import.meta.env.BASE_URL;
 const ITEMS: { img: string; caption: UIKey }[] = [
   { img: 'pvore-jugando.jpg', caption: 'gallery.pvoreJugando' },
   { img: 'team-usa-chile.jpg', caption: 'gallery.teamUsa' },
-  { img: 'venezuela-cs16.jpg', caption: 'gallery.venezuela16' },
-  { img: 'pvore-poster.jpg', caption: 'gallery.poster' },
 ];
 
 /** Archivo visual: fotos y recuerdos de la escena. */
