@@ -293,9 +293,13 @@ const RAW_PLAYERS: RawPlayer[] = [
   {
     id: 'guns',
     nationality: 'VE',
+    fullName: 'Eduardo Pereiro',
     nick: 'guns',
     roles: ['Player'],
     roleLabel: 'Stand-in',
+    birthplace: 'Valencia, Venezuela',
+    currentCountry: 'Santiago, Chile',
+    profession: 'Tech Leader',
     teams: ['Perfectionvore (pvore)'],
     knownFor: {
       es: 'Stand-in de pvore en algunos torneos.',
@@ -306,7 +310,6 @@ const RAW_PLAYERS: RawPlayer[] = [
   {
     id: 'jara',
     nationality: 'VE',
-    fullName: 'Eduardo Jaramillo',
     nick: 'jara',
     roles: ['Player'],
     roleLabel: 'Stand-in',
