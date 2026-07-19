@@ -295,6 +295,7 @@ const RAW_PLAYERS: RawPlayer[] = [
     nationality: 'VE',
     fullName: 'Eduardo Pereiro',
     nick: 'guns',
+    photo: 'guns.jpg',
     roles: ['Player'],
     roleLabel: 'Stand-in',
     birthplace: 'Valencia, Venezuela',
