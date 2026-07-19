@@ -64,6 +64,14 @@ const RAW_TIMELINE: RawTimelineEvent[] = [
     },
   },
   {
+    year: '2013',
+    title: { es: 'pvore entra al CS:GO', en: 'pvore enters CS:GO' },
+    description: {
+      es: 'Perfectionvore da el salto a Counter-Strike: Global Offensive e inicia su etapa internacional, con rosters latinoamericanos —sobre todo argentinos— y expansión por el continente.',
+      en: 'Perfectionvore makes the jump to Counter-Strike: Global Offensive and begins its international era, with Latin American rosters —mostly Argentine— and expansion across the continent.',
+    },
+  },
+  {
     year: '2014',
     title: {
       es: 'y3 entra por vaz; vaz emigra al CS:GO',
