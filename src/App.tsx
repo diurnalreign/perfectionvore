@@ -7,6 +7,7 @@ import RosterSection from './components/RosterSection';
 import Timeline from './components/Timeline';
 import DocumentedEraSection from './components/DocumentedEraSection';
 import TournamentsSection from './components/TournamentsSection';
+import GallerySection from './components/GallerySection';
 import PlayerModal from './components/PlayerModal';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ export default function App() {
     { href: '#timeline', label: t('nav.history') },
     { href: '#csgo', label: t('nav.csgo') },
     { href: '#torneos', label: t('nav.tournaments') },
+    { href: '#galeria', label: t('nav.gallery') },
   ];
 
   return (
@@ -66,6 +68,7 @@ export default function App() {
         <Timeline />
         <DocumentedEraSection />
         <TournamentsSection />
+        <GallerySection />
       </main>
 
       <Footer />

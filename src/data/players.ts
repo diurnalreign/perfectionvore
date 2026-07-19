@@ -255,6 +255,7 @@ const RAW_PLAYERS: RawPlayer[] = [
     nationality: 'VE',
     fullName: 'Arturo Serrano',
     nick: 'kleox',
+    photo: 'kleox.jpg',
     roles: ['Player'],
     roleLabel: {
       es: 'Titular en torneos nacionales (Venezuela)',

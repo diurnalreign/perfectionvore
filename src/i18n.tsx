@@ -26,7 +26,28 @@ const UI = {
   'nav.history': { es: 'Historia', en: 'History' },
   'nav.csgo': { es: 'Era CS:GO', en: 'CS:GO Era' },
   'nav.tournaments': { es: 'Torneos', en: 'Tournaments' },
+  'nav.gallery': { es: 'Galería', en: 'Gallery' },
   'lang.switchTo': { es: 'Switch to English', en: 'Cambiar a español' },
+
+  'gallery.kicker': { es: 'Archivo', en: 'Archive' },
+  'gallery.title': { es: 'Galería', en: 'Gallery' },
+  'gallery.subtitle': {
+    es: 'Fotos y recuerdos de la escena: pvore en competencia, Team USA y el CS 1.6 venezolano.',
+    en: 'Photos and memories from the scene: pvore in competition, Team USA and Venezuelan CS 1.6.',
+  },
+  'gallery.pvoreJugando': {
+    es: 'pvore compitiendo en Campus Party',
+    en: 'pvore competing at Campus Party',
+  },
+  'gallery.teamUsa': {
+    es: 'Team USA en el WCG Panamericano 2012 (Chile), dirigido por vaz',
+    en: 'Team USA at WCG Pan-American 2012 (Chile), managed by vaz',
+  },
+  'gallery.venezuela16': {
+    es: 'La escena del Counter-Strike 1.6 venezolano',
+    en: 'The Venezuelan Counter-Strike 1.6 scene',
+  },
+  'gallery.poster': { es: 'Arte de Perfectionvore', en: 'Perfectionvore artwork' },
 
   'hero.introPre': { es: 'Preservamos la memoria de ', en: 'We preserve the memory of ' },
   'hero.introPost': {
