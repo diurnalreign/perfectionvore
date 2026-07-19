@@ -14,8 +14,11 @@ export interface DocumentedOrg {
 }
 
 const RAW_ORG = {
-  founded: '2010',
-  base: { es: 'Venezuela (sede en Miami, EE. UU.)', en: 'Venezuela (HQ in Miami, USA)' } as LS,
+  founded: '2012',
+  base: {
+    es: 'Venezuela · organización latinoamericana',
+    en: 'Venezuela · Latin American organization',
+  } as LS,
   disbanded: { es: '10 de septiembre de 2017', en: 'September 10, 2017' } as LS,
   disbandNote: {
     es: 'La marca Perfectionvore fue adquirida por Miami Flamingos.',
@@ -135,14 +138,14 @@ interface RawDocumentedPlayer {
 
 const RAW_PLAYERS: RawDocumentedPlayer[] = [
   { nick: 'JonY BoY', realName: 'Jonathan Muñoz', note: { es: 'AWPer argentino', en: 'Argentine AWPer' } },
-  { nick: 'Sheep' },
+  { nick: 'Sheep', realName: 'Maxi Miozzo' },
   { nick: 'minimal' },
   { nick: 'dinamo' },
-  { nick: 'NCH' },
+  { nick: 'NCH', realName: 'Ignacio Devita' },
   { nick: 'NikoM' },
   { nick: 'gianco' },
-  { nick: 'Alexze' },
-  { nick: 'Reversive' },
+  { nick: 'Alexze', realName: 'Ale Marinelli' },
+  { nick: 'Reversive', realName: 'Roberto Themtham' },
   { nick: 'Guishorro' },
 ];
 

@@ -43,6 +43,10 @@ const UI = {
     es: 'Team USA en el WCG Panamericano 2012 (Chile), dirigido por vaz',
     en: 'Team USA at WCG Pan-American 2012 (Chile), managed by vaz',
   },
+  'gallery.csgoLan': {
+    es: 'El equipo de CS:GO de pvore compitiendo en LAN (2015)',
+    en: "pvore's CS:GO team competing at a LAN (2015)",
+  },
 
   'hero.introPre': { es: 'Preservamos la memoria de ', en: 'We preserve the memory of ' },
   'hero.introPost': {
@@ -100,8 +104,8 @@ const UI = {
   'csgo.kicker': { es: 'Registro público', en: 'Public record' },
   'csgo.title': { es: 'Era CS:GO · 2013–2017', en: 'CS:GO Era · 2013–2017' },
   'csgo.subtitle': {
-    es: 'La etapa de Perfectionvore en Counter-Strike: Global Offensive arrancó en 2013, con rosters mayormente argentinos y latinoamericanos. Los movimientos de roster de abajo provienen de fuentes externas (Liquipedia/HLTV), que documentan la organización desde 2015.',
-    en: "Perfectionvore's Counter-Strike: Global Offensive era began in 2013, with mostly Argentine and Latin American rosters. The roster moves below come from external sources (Liquipedia/HLTV), which document the organization from 2015 onward.",
+    es: 'La etapa de Perfectionvore en Counter-Strike: Global Offensive arrancó en 2013. Organización latinoamericana nacida en Venezuela en 2012, se expandió por Perú, Colombia, México, Ecuador, Chile, EE. UU. y, sobre todo, Argentina, con CS:GO como juego principal (además de Dota 2 y Hearthstone). Datos del registro público (Liquipedia/HLTV) y del brochure oficial 2015 de pvore.',
+    en: "Perfectionvore's Counter-Strike: Global Offensive era began in 2013. A Latin American organization born in Venezuela in 2012, it expanded across Peru, Colombia, Mexico, Ecuador, Chile, the USA and — above all — Argentina, with CS:GO as its main game (plus Dota 2 and Hearthstone). Data from the public record (Liquipedia/HLTV) and pvore's official 2015 brochure.",
   },
   'csgo.founded': { es: 'Fundación', en: 'Founded' },
   'csgo.base': { es: 'Base', en: 'Based in' },

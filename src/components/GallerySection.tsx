@@ -5,6 +5,7 @@ const base = import.meta.env.BASE_URL;
 
 const ITEMS: { img: string; caption: UIKey }[] = [
   { img: 'pvore-jugando.jpg', caption: 'gallery.pvoreJugando' },
+  { img: 'pvore-csgo-lan.jpg', caption: 'gallery.csgoLan' },
   { img: 'team-usa-chile.jpg', caption: 'gallery.teamUsa' },
 ];
 
