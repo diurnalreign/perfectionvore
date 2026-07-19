@@ -8,7 +8,7 @@ interface Props {
 export default function SectionHeading({ kicker, title, subtitle }: Props) {
   return (
     <header className="mb-12 text-center">
-      <p className="text-xs uppercase tracking-[0.35em] text-[#27f3a9]">{kicker}</p>
+      <p className="text-xs uppercase tracking-[0.35em] text-[#ff3b4e]">{kicker}</p>
       <h2
         className="mt-3 text-4xl font-bold text-white sm:text-5xl"
         style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: '0.02em' }}
@@ -16,7 +16,7 @@ export default function SectionHeading({ kicker, title, subtitle }: Props) {
         {title}
       </h2>
       {subtitle && (
-        <p className="mx-auto mt-4 max-w-2xl text-[#aebcb5]">{subtitle}</p>
+        <p className="mx-auto mt-4 max-w-2xl text-[#bcaeb1]">{subtitle}</p>
       )}
     </header>
   );

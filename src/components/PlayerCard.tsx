@@ -15,8 +15,8 @@ function Row({ icon, label, value }: { icon: string; label: string; value: strin
       <span aria-hidden="true" className="w-5 shrink-0 text-center">
         {icon}
       </span>
-      <span className="shrink-0 text-[#7f938b]">{label}:</span>
-      <span className="text-[#dbe4df]">{value}</span>
+      <span className="shrink-0 text-[#937f84]">{label}:</span>
+      <span className="text-[#e4dbdd]">{value}</span>
     </div>
   );
 }
@@ -26,31 +26,31 @@ export default function PlayerCard({ player, onOpen }: Props) {
   const { t } = useLang();
   const photo = photoUrl(p);
   return (
-    <article className="group relative flex flex-col rounded-2xl border border-[#17241f] bg-[#0a0f0d]/80 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#27f3a9]/50 hover:shadow-[0_10px_40px_-12px_rgba(39,243,169,0.35)]">
+    <article className="group relative flex flex-col rounded-2xl border border-[#241719] bg-[#0f0a0b]/80 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#ff3b4e]/50 hover:shadow-[0_10px_40px_-12px_rgba(255, 59, 78,0.35)]">
       {/* Cabecera: avatar (si hay) + nick clicable */}
       <header className="mb-4 flex items-center justify-between gap-3">
         <button
           onClick={() => onOpen(p)}
-          className="flex min-w-0 items-center gap-3 text-left transition-colors hover:text-[#27f3a9]"
+          className="flex min-w-0 items-center gap-3 text-left transition-colors hover:text-[#ff3b4e]"
         >
           {photo && (
             <img
               src={photo}
               alt={`${p.nick}`}
               loading="lazy"
-              className="h-12 w-12 shrink-0 rounded-full border border-[#27f3a9]/30 object-cover"
+              className="h-12 w-12 shrink-0 rounded-full border border-[#ff3b4e]/30 object-cover"
             />
           )}
           {p.nationality && <Flag code={p.nationality} className="h-4 w-6 shrink-0" />}
           <span
-            className="truncate text-2xl font-bold tracking-wide text-white transition-colors group-hover:text-[#27f3a9]"
+            className="truncate text-2xl font-bold tracking-wide text-white transition-colors group-hover:text-[#ff3b4e]"
             style={{ fontFamily: "'Oswald', sans-serif" }}
           >
             {p.nick}
           </span>
         </button>
         {p.founder && (
-          <span className="shrink-0 rounded-full border border-[#27f3a9]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#27f3a9]">
+          <span className="shrink-0 rounded-full border border-[#ff3b4e]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#ff3b4e]">
             {t('badge.starter2012')}
           </span>
         )}
@@ -68,7 +68,7 @@ export default function PlayerCard({ player, onOpen }: Props) {
       </div>
 
       {p.knownFor && (
-        <p className="mt-4 border-l-2 border-[#27f3a9]/40 pl-3 text-sm italic text-[#aebcb5]">
+        <p className="mt-4 border-l-2 border-[#ff3b4e]/40 pl-3 text-sm italic text-[#bcaeb1]">
           💬 {p.knownFor}
         </p>
       )}
@@ -79,7 +79,7 @@ export default function PlayerCard({ player, onOpen }: Props) {
 
       <button
         onClick={() => onOpen(p)}
-        className="mt-5 inline-flex items-center gap-2 self-start text-sm font-medium text-[#27f3a9] transition-transform hover:translate-x-1"
+        className="mt-5 inline-flex items-center gap-2 self-start text-sm font-medium text-[#ff3b4e] transition-transform hover:translate-x-1"
       >
         {t('card.viewBio')}
       </button>

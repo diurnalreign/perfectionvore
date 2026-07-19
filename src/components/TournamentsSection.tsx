@@ -18,16 +18,16 @@ export default function TournamentsSection() {
         {tournaments.map((t2) => (
           <div
             key={t2.name}
-            className="relative overflow-hidden rounded-2xl border border-[#17241f] bg-gradient-to-br from-[#0a0f0d] to-[#0d1512] p-7"
+            className="relative overflow-hidden rounded-2xl border border-[#241719] bg-gradient-to-br from-[#0f0a0b] to-[#150d0f] p-7"
           >
             <div className="mb-3 text-4xl" aria-hidden="true">
               🏆
             </div>
             <h3 className="text-xl font-bold text-white">{t2.name}</h3>
-            <p className="mt-1 text-sm text-[#8aa79b]">📍 {t2.location}</p>
-            {t2.game && <p className="mt-0.5 text-sm text-[#7f938b]">🕹️ {t2.game}</p>}
-            <p className="mt-3 text-lg font-semibold text-[#27f3a9]">{t2.result}</p>
-            {t2.details && <p className="mt-2 text-sm text-[#c7d2cc]">{t2.details}</p>}
+            <p className="mt-1 text-sm text-[#a78a90]">📍 {t2.location}</p>
+            {t2.game && <p className="mt-0.5 text-sm text-[#937f84]">🕹️ {t2.game}</p>}
+            <p className="mt-3 text-lg font-semibold text-[#ff3b4e]">{t2.result}</p>
+            {t2.details && <p className="mt-2 text-sm text-[#d2c7c9]">{t2.details}</p>}
           </div>
         ))}
       </div>
@@ -44,7 +44,7 @@ export default function TournamentsSection() {
               🎥 {v.title}
             </h3>
             <div
-              className="relative w-full overflow-hidden rounded-2xl border border-[#17241f]"
+              className="relative w-full overflow-hidden rounded-2xl border border-[#241719]"
               style={{ paddingTop: '56.25%' }}
             >
               <iframe
@@ -59,7 +59,7 @@ export default function TournamentsSection() {
           </div>
         ))}
 
-      <p className="mt-10 text-center text-sm text-[#7f938b]">{t('tournaments.footer')}</p>
+      <p className="mt-10 text-center text-sm text-[#937f84]">{t('tournaments.footer')}</p>
     </section>
   );
 }

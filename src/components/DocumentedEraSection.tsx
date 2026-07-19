@@ -25,19 +25,19 @@ export default function DocumentedEraSection() {
       />
 
       {/* Ficha de la organización */}
-      <div className="mb-12 grid gap-4 rounded-xl border border-[#1c2b25] bg-[#0a0f0d] p-6 sm:grid-cols-3">
+      <div className="mb-12 grid gap-4 rounded-xl border border-[#2b1c1f] bg-[#0f0a0b] p-6 sm:grid-cols-3">
         <div>
-          <p className="text-[11px] uppercase tracking-widest text-[#27f3a9]">{t('csgo.founded')}</p>
+          <p className="text-[11px] uppercase tracking-widest text-[#ff3b4e]">{t('csgo.founded')}</p>
           <p className="mt-1 text-white">{org.founded}</p>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-widest text-[#27f3a9]">{t('csgo.base')}</p>
+          <p className="text-[11px] uppercase tracking-widest text-[#ff3b4e]">{t('csgo.base')}</p>
           <p className="mt-1 text-white">{org.base}</p>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-widest text-[#27f3a9]">{t('csgo.disbanded')}</p>
+          <p className="text-[11px] uppercase tracking-widest text-[#ff3b4e]">{t('csgo.disbanded')}</p>
           <p className="mt-1 text-white">{org.disbanded}</p>
-          <p className="mt-1 text-sm text-[#8aa79b]">{org.disbandNote}</p>
+          <p className="mt-1 text-sm text-[#a78a90]">{org.disbandNote}</p>
         </div>
       </div>
 
@@ -52,11 +52,11 @@ export default function DocumentedEraSection() {
         {players.map((p) => (
           <li
             key={p.nick}
-            className="rounded-full border border-[#1c2b25] bg-[#0a0f0d] px-3 py-1.5 text-sm"
+            className="rounded-full border border-[#2b1c1f] bg-[#0f0a0b] px-3 py-1.5 text-sm"
             title={[p.realName, p.note].filter(Boolean).join(' · ')}
           >
             <span className="text-white">{p.nick}</span>
-            {p.realName && <span className="ml-1 text-[#8aa79b]">· {p.realName}</span>}
+            {p.realName && <span className="ml-1 text-[#a78a90]">· {p.realName}</span>}
           </li>
         ))}
       </ul>
@@ -68,35 +68,35 @@ export default function DocumentedEraSection() {
       >
         {t('csgo.timeline')}
       </h3>
-      <ol className="relative border-l border-[#1c2b25] pl-8">
+      <ol className="relative border-l border-[#2b1c1f] pl-8">
         {timeline.map((e, i) => (
           <li key={i} className="mb-8 last:mb-0">
             <span
-              className="absolute -left-[9px] mt-1.5 h-4 w-4 rounded-full border-2 border-[#27f3a9] bg-[#050706]"
+              className="absolute -left-[9px] mt-1.5 h-4 w-4 rounded-full border-2 border-[#ff3b4e] bg-[#070505]"
               aria-hidden="true"
             />
             <div className="flex flex-wrap items-baseline gap-3">
               <time
-                className="text-sm font-bold uppercase tracking-wider text-[#27f3a9]"
+                className="text-sm font-bold uppercase tracking-wider text-[#ff3b4e]"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
                 {e.date}
               </time>
               <h4 className="font-semibold text-white">{e.title}</h4>
             </div>
-            <p className="mt-1.5 text-[#c7d2cc]">{e.description}</p>
+            <p className="mt-1.5 text-[#d2c7c9]">{e.description}</p>
           </li>
         ))}
       </ol>
 
       {/* Atribución de fuente */}
-      <p className="mt-10 text-center text-xs text-[#6f8378]">
+      <p className="mt-10 text-center text-xs text-[#836f73]">
         {t('csgo.sourcePre')}
         <a
           href="https://liquipedia.net/counterstrike/Perfectionvore"
           target="_blank"
           rel="noreferrer noopener"
-          className="underline transition-colors hover:text-[#27f3a9]"
+          className="underline transition-colors hover:text-[#ff3b4e]"
         >
           Liquipedia
         </a>
@@ -105,7 +105,7 @@ export default function DocumentedEraSection() {
           href="https://www.hltv.org/stats/teams/5092/Perfectionvore"
           target="_blank"
           rel="noreferrer noopener"
-          className="underline transition-colors hover:text-[#27f3a9]"
+          className="underline transition-colors hover:text-[#ff3b4e]"
         >
           HLTV
         </a>

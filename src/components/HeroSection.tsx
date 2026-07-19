@@ -18,7 +18,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center"
-      style={{ background: '#050706' }}
+      style={{ background: '#070505' }}
     >
       <AnimatedBackground />
 
@@ -29,7 +29,7 @@ export default function HeroSection() {
         style={{
           zIndex: 1,
           background:
-            'radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(5,7,6,0.85) 100%)',
+            'radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(7,5,5,0.85) 100%)',
         }}
       />
 
@@ -62,13 +62,13 @@ export default function HeroSection() {
             fontSize: 'clamp(0.85rem, 2.4vw, 1.15rem)',
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: '#8aa79b',
+            color: '#a78a90',
           }}
         >
           <span>Counter-Strike</span>
-          <span style={{ color: '#27f3a9' }}>·</span>
+          <span style={{ color: '#ff3b4e' }}>·</span>
           <span>Venezuela</span>
-          <span style={{ color: '#27f3a9' }}>·</span>
+          <span style={{ color: '#ff3b4e' }}>·</span>
           <span>Hall of Fame</span>
         </p>
 
@@ -76,7 +76,7 @@ export default function HeroSection() {
           className="mt-6 max-w-xl px-2 text-center"
           style={{
             fontSize: 'clamp(0.95rem, 2.2vw, 1.2rem)',
-            color: '#c7d2cc',
+            color: '#d2c7c9',
             lineHeight: 1.5,
             fontWeight: 400,
           }}
@@ -88,13 +88,13 @@ export default function HeroSection() {
 
         <a
           href="#roster"
-          className="mt-8 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0px_6px_32px_8px_rgba(39,243,169,0.22)] active:scale-[0.98]"
+          className="mt-8 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0px_6px_32px_8px_rgba(255, 59, 78,0.22)] active:scale-[0.98]"
           style={{
             padding: '12px 28px',
             background: '#000',
-            boxShadow: '0px 6px 24px 6px rgba(39, 243, 169, 0.15)',
+            boxShadow: '0px 6px 24px 6px rgba(255, 59, 78, 0.15)',
             borderRadius: 8,
-            outline: '1px solid #30463C',
+            outline: '1px solid #46302f',
             outlineOffset: -1,
             border: 'none',
             cursor: 'pointer',
@@ -106,7 +106,7 @@ export default function HeroSection() {
           }}
         >
           <span style={{ color: '#fff', fontSize: 15, fontWeight: 500 }}>{t('hero.cta')}</span>
-          <span aria-hidden="true" style={{ color: '#27f3a9' }}>
+          <span aria-hidden="true" style={{ color: '#ff3b4e' }}>
             ↓
           </span>
         </a>
@@ -118,7 +118,7 @@ export default function HeroSection() {
         className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
         style={{
           zIndex: 2,
-          background: 'linear-gradient(to bottom, transparent, #050706)',
+          background: 'linear-gradient(to bottom, transparent, #070505)',
         }}
       />
     </section>

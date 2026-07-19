@@ -25,7 +25,7 @@ export default function GallerySection() {
         {ITEMS.map((it) => (
           <figure
             key={it.img}
-            className="overflow-hidden rounded-2xl border border-[#17241f] bg-[#0a0f0d]"
+            className="overflow-hidden rounded-2xl border border-[#241719] bg-[#0f0a0b]"
           >
             <div className="aspect-[4/3] w-full overflow-hidden">
               <img
@@ -35,7 +35,7 @@ export default function GallerySection() {
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.04]"
               />
             </div>
-            <figcaption className="px-4 py-3 text-center text-sm text-[#aebcb5]">
+            <figcaption className="px-4 py-3 text-center text-sm text-[#bcaeb1]">
               {t(it.caption)}
             </figcaption>
           </figure>

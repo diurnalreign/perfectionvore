@@ -29,28 +29,28 @@ export default function RosterSection({ players, onOpen }: Props) {
         {rosters.map((r, i) => (
           <div
             key={`${r.year}-${i}`}
-            className="rounded-2xl border border-[#17241f] bg-[#0a0f0d]/60 p-5"
+            className="rounded-2xl border border-[#241719] bg-[#0f0a0b]/60 p-5"
           >
             <div className="flex flex-wrap items-center gap-3">
               <span
-                className="text-3xl font-bold text-[#27f3a9]"
+                className="text-3xl font-bold text-[#ff3b4e]"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
                 {r.year}
               </span>
-              <span className="text-sm uppercase tracking-widest text-[#7f938b]">
+              <span className="text-sm uppercase tracking-widest text-[#937f84]">
                 {r.label}
               </span>
             </div>
-            <p className="mt-2 text-[#dbe4df]">
+            <p className="mt-2 text-[#e4dbdd]">
               {r.starters.join(' · ')}
               {r.standins && (
-                <span className="text-[#8aa79b]">
+                <span className="text-[#a78a90]">
                   {'  '}— {t('roster.standins')}: {r.standins.join(', ')}
                 </span>
               )}
             </p>
-            {r.note && <p className="mt-1 text-sm text-[#7f938b]">{r.note}</p>}
+            {r.note && <p className="mt-1 text-sm text-[#937f84]">{r.note}</p>}
           </div>
         ))}
       </div>

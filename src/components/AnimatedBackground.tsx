@@ -60,8 +60,8 @@ export default function AnimatedBackground() {
         height * 0.42,
         Math.max(width, height) * 0.7,
       );
-      grad.addColorStop(0, 'rgba(39,243,169,0.06)');
-      grad.addColorStop(1, 'rgba(5,7,6,0)');
+      grad.addColorStop(0, 'rgba(255, 59, 78,0.06)');
+      grad.addColorStop(1, 'rgba(7,5,5,0)');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, width, height);
 
@@ -73,7 +73,7 @@ export default function AnimatedBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(39,243,169,0.65)';
+        ctx.fillStyle = 'rgba(255, 59, 78,0.65)';
         ctx.fill();
       }
 
@@ -89,7 +89,7 @@ export default function AnimatedBackground() {
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(39,243,169,${0.14 * (1 - dist / 130)})`;
+            ctx.strokeStyle = `rgba(255, 59, 78,${0.14 * (1 - dist / 130)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }

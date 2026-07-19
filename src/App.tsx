@@ -27,9 +27,9 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#050706]">
+    <div className="min-h-screen bg-[#070505]">
       {/* Nav flotante */}
-      <nav className="fixed inset-x-0 top-0 z-40 border-b border-[#17241f]/60 bg-[#050706]/70 backdrop-blur-md">
+      <nav className="fixed inset-x-0 top-0 z-40 border-b border-[#241719]/60 bg-[#070505]/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a
             href="#top"
@@ -39,10 +39,10 @@ export default function App() {
             pvore
           </a>
           <div className="flex items-center gap-5">
-            <ul className="hidden gap-5 text-sm text-[#aebcb5] sm:flex">
+            <ul className="hidden gap-5 text-sm text-[#bcaeb1] sm:flex">
               {nav.map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="transition-colors hover:text-[#27f3a9]">
+                  <a href={n.href} className="transition-colors hover:text-[#ff3b4e]">
                     {n.label}
                   </a>
                 </li>
@@ -52,7 +52,7 @@ export default function App() {
               onClick={toggle}
               aria-label={t('lang.switchTo')}
               title={t('lang.switchTo')}
-              className="flex items-center gap-1.5 rounded-full border border-[#27f3a9]/40 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#27f3a9] transition-colors hover:bg-[#27f3a9]/10"
+              className="flex items-center gap-1.5 rounded-full border border-[#ff3b4e]/40 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#ff3b4e] transition-colors hover:bg-[#ff3b4e]/10"
             >
               <span aria-hidden="true">🌐</span>
               {lang === 'es' ? 'EN' : 'ES'}

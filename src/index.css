@@ -25,13 +25,13 @@
 
 /* ==========================================================================
    Tema de Perfectionvore
-   - Negro profundo + verde "pvore" (#27F3A9), guiño al glow del logo.
+   - Negro profundo + verde "pvore" (#ff3b4e), guiño al glow del logo.
    ========================================================================== */
 @theme {
-  --color-void: #050706;
-  --color-ink: #0a0f0d;
-  --color-pvore: #27f3a9;
-  --color-pvore-dim: #30463c;
+  --color-void: #070505;
+  --color-ink: #0f0a0b;
+  --color-pvore: #ff3b4e;
+  --color-pvore-dim: #46302f;
   --font-display: 'Oswald', 'Bebas Neue', 'YDYoonche L', 'YDYoonche M', sans-serif;
   /* Wordmark: True Lies con Oswald de reserva mientras no esté el archivo. */
   --font-wordmark: 'True Lies', 'Oswald', 'Bebas Neue', sans-serif;
@@ -47,8 +47,8 @@ html {
 
 body {
   margin: 0;
-  background: #050706;
-  color: #e7ece9;
+  background: #070505;
+  color: #ece7e8;
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -73,10 +73,10 @@ body {
 @keyframes glow-pulse {
   0%,
   100% {
-    filter: drop-shadow(0 0 24px rgba(39, 243, 169, 0.25));
+    filter: drop-shadow(0 0 24px rgba(255, 59, 78, 0.25));
   }
   50% {
-    filter: drop-shadow(0 0 46px rgba(39, 243, 169, 0.55));
+    filter: drop-shadow(0 0 46px rgba(255, 59, 78, 0.55));
   }
 }
 
@@ -112,7 +112,7 @@ body {
 
 /* Titular con degradado plateado animado, como en el brief original. */
 .gradient-title {
-  background: linear-gradient(90deg, #4a4a4a 0%, #ffffff 45%, #27f3a9 55%, #4a4a4a 100%);
+  background: linear-gradient(90deg, #4a4a4a 0%, #ffffff 45%, #ff3b4e 55%, #4a4a4a 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -137,12 +137,12 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #050706;
+  background: #070505;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1c2b25;
+  background: #2b1c1f;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #27f3a9;
+  background: #ff3b4e;
 }

@@ -14,16 +14,16 @@ export default function Timeline() {
         subtitle={t('timeline.subtitle')}
       />
 
-      <ol className="relative border-l border-[#1c2b25] pl-8">
+      <ol className="relative border-l border-[#2b1c1f] pl-8">
         {timeline.map((e, i) => (
           <li key={i} className="mb-10 last:mb-0">
             <span
-              className="absolute -left-[9px] mt-1.5 h-4 w-4 rounded-full border-2 border-[#27f3a9] bg-[#050706]"
+              className="absolute -left-[9px] mt-1.5 h-4 w-4 rounded-full border-2 border-[#ff3b4e] bg-[#070505]"
               aria-hidden="true"
             />
             <div className="flex flex-wrap items-baseline gap-3">
               <time
-                className="text-xl font-bold text-[#27f3a9]"
+                className="text-xl font-bold text-[#ff3b4e]"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
                 {e.year}
@@ -35,7 +35,7 @@ export default function Timeline() {
                 </span>
               )}
             </div>
-            <p className="mt-2 text-[#c7d2cc]">{e.description}</p>
+            <p className="mt-2 text-[#d2c7c9]">{e.description}</p>
           </li>
         ))}
       </ol>
