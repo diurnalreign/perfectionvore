@@ -103,10 +103,10 @@ const UI = {
   },
 
   'csgo.kicker': { es: 'Registro público', en: 'Public record' },
-  'csgo.title': { es: 'Era CS:GO · 2015–2017', en: 'CS:GO Era · 2015–2017' },
+  'csgo.title': { es: 'Era CS:GO · 2013–2017', en: 'CS:GO Era · 2013–2017' },
   'csgo.subtitle': {
-    es: 'La organización Perfectionvore tuvo también una etapa en Counter-Strike: Global Offensive con rosters mayormente argentinos y latinoamericanos. Estos datos provienen de fuentes externas, no de la memoria de la comunidad 1.6.',
-    en: 'The Perfectionvore organization also had a Counter-Strike: Global Offensive era with mostly Argentine and Latin American rosters. This data comes from external sources, not from the 1.6 community’s memory.',
+    es: 'La etapa de Perfectionvore en Counter-Strike: Global Offensive arrancó en 2013, con rosters mayormente argentinos y latinoamericanos. Los movimientos de roster de abajo provienen de fuentes externas (Liquipedia/HLTV), que documentan la organización desde 2015.',
+    en: "Perfectionvore's Counter-Strike: Global Offensive era began in 2013, with mostly Argentine and Latin American rosters. The roster moves below come from external sources (Liquipedia/HLTV), which document the organization from 2015 onward.",
   },
   'csgo.founded': { es: 'Fundación', en: 'Founded' },
   'csgo.base': { es: 'Base', en: 'Based in' },
