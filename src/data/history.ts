@@ -20,11 +20,9 @@ export const TIMELINE: TimelineEvent[] = [
       'vaz empieza a competir en Counter-Strike. Nace, con ella, una de las primeras generaciones de la escena venezolana.',
   },
   {
-    year: 'c. 2011',
+    year: 'Mayo 2012',
     title: 'Fundación de Perfectionvore',
-    description:
-      'vaz funda Perfectionvore (pvore). El año exacto de fundación está por confirmar.',
-    tentative: true,
+    description: 'vaz funda Perfectionvore (pvore) en mayo de 2012.',
   },
   {
     year: '2012',
