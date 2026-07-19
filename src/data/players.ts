@@ -176,6 +176,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'kleox',
     nationality: 'VE',
+    fullName: 'Arturo Serrano',
     nick: 'kleox',
     roles: ['Player'],
     roleLabel: 'Titular en torneos nacionales (Venezuela)',
