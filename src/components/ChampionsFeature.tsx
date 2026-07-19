@@ -22,8 +22,8 @@ export default function ChampionsFeature() {
             🏆 Campeones · Campus Party Quito 2012
           </p>
           <p className="mt-2 text-[#c7d2cc]">
-            El quinteto de pvore —vaz, Shaquille, LEWKZ, skei y NiwdE— tras ganar el primer
-            lugar ($1,800) en Counter-Strike 1.6.
+            El quinteto de pvore tras ganar el primer lugar ($1,800) en Counter-Strike 1.6.
+            De izquierda a derecha: skei, Shaquille, vaz, LEWKZ y NiwdE.
           </p>
         </figcaption>
       </figure>
