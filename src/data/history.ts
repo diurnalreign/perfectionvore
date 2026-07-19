@@ -224,9 +224,9 @@ const RAW_TOURNAMENTS: RawTournament[] = [
     ],
   },
   {
-    name: { es: 'Torneos Nacionales de Venezuela', en: 'Venezuela National Tournaments' },
-    location: 'Venezuela',
-    result: { es: 'Múltiples títulos 🏆', en: 'Multiple titles 🏆' },
+    name: 'Torneo Regional JVA NET',
+    location: 'Barcelona, Anzoátegui, Venezuela',
+    result: { es: '1er lugar 🏆', en: '1st place 🏆' },
     game: 'Counter-Strike 1.6',
   },
 ];
