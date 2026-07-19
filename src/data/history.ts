@@ -30,14 +30,13 @@ export const TIMELINE: TimelineEvent[] = [
     year: '2012',
     title: 'La época de oro',
     description:
-      'El roster principal —vaz, Shaquille, LEWKZ, skei y NiwdE— alcanza su punto más alto y gana torneos nacionales. En Venezuela, kleox entra como stand-in.',
+      'pvore alcanza su punto más alto y gana torneos nacionales de Venezuela con vaz, Shaquille, LEWKZ, skei y kleox. Para el Campus Party de Ecuador, se suma el dominicano NiwdE.',
   },
   {
-    year: '2012+',
-    title: 'Campus Party Ecuador',
+    year: '2012',
+    title: 'Campeones en Campus Party Ecuador',
     description:
-      'pvore lleva su nombre fuera de Venezuela y se corona campeón en Campus Party Ecuador con su quinteto principal (vaz, Shaquille, LEWKZ, skei y NiwdE).',
-    tentative: true,
+      'Del 19 al 23 de septiembre, en Cemexpo (Quito), pvore se corona campeón de Campus Party Ecuador 2012 (CS 1.6) con su quinteto vaz, Shaquille, LEWKZ, skei y NiwdE. Se llevan el primer lugar ($1,800 de un pozo de $2,550), por delante de Make it Happen.',
   },
   {
     year: '2014',
@@ -77,15 +76,15 @@ export const ROSTERS: RosterYear[] = [
   {
     year: '2012+',
     label: 'Torneos nacionales · Venezuela',
-    starters: ['vaz', 'Shaquille', 'LEWKZ', 'skei', 'NiwdE'],
-    standins: ['kleox', 'guns', 'jara'],
-    note: 'En Venezuela, kleox entraba como stand-in.',
+    starters: ['vaz', 'Shaquille', 'LEWKZ', 'skei', 'kleox'],
+    standins: ['guns', 'jara'],
+    note: 'En Venezuela, kleox ocupaba el quinto puesto titular (NiwdE, dominicano, jugó con pvore en Campus Party Ecuador).',
   },
   {
     year: '2014',
     label: 'Torneos nacionales · Venezuela (2014)',
-    starters: ['y3', 'Shaquille', 'LEWKZ', 'skei', 'NiwdE'],
-    standins: ['kleox', 'guns', 'jara'],
+    starters: ['y3', 'Shaquille', 'LEWKZ', 'skei', 'kleox'],
+    standins: ['guns', 'jara'],
     note: 'En 2014, y3 (Yessica López) sustituyó a vaz en los torneos nacionales de Venezuela.',
   },
 ];
@@ -95,19 +94,33 @@ export interface Tournament {
   location: string;
   result: string;
   year?: string;
+  /** Juego en que se disputó (ej. "Counter-Strike 1.6"). */
+  game?: string;
+  /** Detalles adicionales: fechas, sede, premio, rivales. */
+  details?: string;
+  /** Video relacionado (entrevista, etc.) para incrustar. */
+  video?: { url: string; title: string };
   tentative?: boolean;
 }
 
 export const TOURNAMENTS: Tournament[] = [
   {
+    name: 'Campus Party Ecuador 2012',
+    location: 'Cemexpo, Quito, Ecuador',
+    result: 'Campeones 🥇 — $1,800',
+    year: '2012',
+    game: 'Counter-Strike 1.6',
+    details:
+      '19–23 de septiembre de 2012. Pozo total de $2,550. pvore terminó 1º por delante de Make it Happen (2º).',
+    video: {
+      url: 'https://www.youtube-nocookie.com/embed/-xTG9Aex9Is',
+      title: 'Entrevista a Perfectionvore en Campus Party 2012',
+    },
+  },
+  {
     name: 'Torneos Nacionales de Venezuela',
     location: 'Venezuela',
     result: 'Múltiples títulos 🏆',
-  },
-  {
-    name: 'Campus Party',
-    location: 'Ecuador',
-    result: 'Campeones 🥇',
-    tentative: true,
+    game: 'Counter-Strike 1.6',
   },
 ];

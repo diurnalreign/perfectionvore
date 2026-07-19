@@ -90,14 +90,13 @@ Edita `src/data/players.ts`. Cada ficha sigue la **plantilla oficial**:
 Los campos que dejes en `undefined` se muestran como **"Por confirmar"**, y las fichas con
 `underReconstruction: true` invitan a la comunidad a aportar datos.
 
-## Roster principal (2012)
+## Roster (2012)
 
-**vaz** (fundadora, Alba Tirado) · **Shaquille** (Jesus Arizmendi) · **LEWKZ** (Antonio Serrano)
-· **skei** (Roberto Bracho) · **NiwdE** (Edwin Mateo)
-
-Quinteto que representó a pvore en **Campus Party Ecuador**. En los torneos nacionales de
-**Venezuela**, **kleox** entraba como stand-in (junto a **guns** y **jara**). En **2014**,
-**y3** (Yessica López) sustituyó a vaz en los torneos nacionales.
+- **Torneos nacionales (Venezuela):** **vaz** (Alba Tirado) · **Shaquille** (Jesus Arizmendi) ·
+  **LEWKZ** (Antonio Serrano) · **skei** (Roberto Bracho) · **kleox**. Stand-ins: **guns**, **jara**.
+- **Campus Party Ecuador 2012:** el mismo quinteto pero con **NiwdE** (Edwin Mateo, dominicano de
+  San Pedro de Macorís) en el quinto puesto. **Campeones** (CS 1.6): 1º de $2,550, $1,800 de premio.
+- **2014:** **y3** (Yessica López) sustituyó a vaz en los torneos nacionales de Venezuela.
 
 ## Era CS:GO (registro público)
 
