@@ -23,6 +23,28 @@ npm run build    # build de producción a /dist
 npm run preview  # previsualiza el build
 ```
 
+## Despliegue (GitHub Pages)
+
+El sitio está publicado en:
+
+**🔗 https://diurnalreign.github.io/perfectionvore/**
+
+El despliegue es **automático**: cada `push` a la rama `main` dispara el workflow
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), que construye el sitio con
+Vite y lo publica en GitHub Pages. No hay pasos manuales.
+
+Detalles:
+
+- Como es un *project site*, la app se sirve bajo el subpath `/perfectionvore/`. Por eso
+  `vite.config.ts` fija `base: '/perfectionvore/'` y las rutas a `public/` se resuelven con
+  `import.meta.env.BASE_URL` (ver `src/components/HeroSection.tsx`).
+- La fuente de Pages está configurada en **Settings → Pages → Source: "GitHub Actions"**.
+- También se puede lanzar a mano desde la pestaña **Actions → Deploy to GitHub Pages →
+  Run workflow** (el workflow acepta `workflow_dispatch`).
+
+> Si cambias el nombre del repositorio o lo mueves a otra cuenta/organización, actualiza el
+> `base` en `vite.config.ts` para que coincida con el nuevo subpath.
+
 ## Estructura
 
 ```
