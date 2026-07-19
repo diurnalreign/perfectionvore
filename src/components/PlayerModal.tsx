@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import type { Player } from '../data/players';
-import { roleText } from '../data/players';
+import { roleText, photoUrl } from '../data/players';
 
 interface Props {
   player: Player | null;
@@ -77,17 +77,26 @@ export default function PlayerModal({ player, onClose }: Props) {
           ✕
         </button>
 
-        <header className="mb-6 pr-10">
-          <h2
-            className="text-4xl font-bold text-white"
-            style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: '0.03em' }}
-          >
-            {p.nick}
-          </h2>
-          {p.fullName && <p className="mt-1 text-[#8aa79b]">{p.fullName}</p>}
-          <p className="mt-2 inline-block rounded-full border border-[#27f3a9]/40 px-3 py-1 text-xs uppercase tracking-widest text-[#27f3a9]">
-            {roleText(p)}
-          </p>
+        <header className="mb-6 flex items-start gap-4 pr-10">
+          {photoUrl(p) && (
+            <img
+              src={photoUrl(p)}
+              alt={`Foto de ${p.nick}`}
+              className="h-20 w-20 shrink-0 rounded-2xl border border-[#27f3a9]/30 object-cover sm:h-24 sm:w-24"
+            />
+          )}
+          <div className="min-w-0">
+            <h2
+              className="text-4xl font-bold text-white"
+              style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: '0.03em' }}
+            >
+              {p.nick}
+            </h2>
+            {p.fullName && <p className="mt-1 text-[#8aa79b]">{p.fullName}</p>}
+            <p className="mt-2 inline-block rounded-full border border-[#27f3a9]/40 px-3 py-1 text-xs uppercase tracking-widest text-[#27f3a9]">
+              {roleText(p)}
+            </p>
+          </div>
         </header>
 
         <div className="grid gap-2 sm:grid-cols-2">

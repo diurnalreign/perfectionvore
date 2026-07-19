@@ -1,5 +1,5 @@
 import type { Player } from '../data/players';
-import { roleText } from '../data/players';
+import { roleText, photoUrl } from '../data/players';
 
 interface Props {
   player: Player;
@@ -21,21 +21,34 @@ function Row({ icon, label, value }: { icon: string; label: string; value?: stri
 
 export default function PlayerCard({ player, onOpen }: Props) {
   const p = player;
+  const photo = photoUrl(p);
   return (
     <article
       className="group relative flex flex-col rounded-2xl border border-[#17241f] bg-[#0a0f0d]/80 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#27f3a9]/50 hover:shadow-[0_10px_40px_-12px_rgba(39,243,169,0.35)]"
     >
-      {/* Cabecera: nick clicable */}
-      <header className="mb-4 flex items-baseline justify-between gap-3">
+      {/* Cabecera: avatar (si hay) + nick clicable */}
+      <header className="mb-4 flex items-center justify-between gap-3">
         <button
           onClick={() => onOpen(p)}
-          className="text-left text-2xl font-bold tracking-wide text-white transition-colors hover:text-[#27f3a9]"
-          style={{ fontFamily: "'Oswald', sans-serif" }}
+          className="flex min-w-0 items-center gap-3 text-left transition-colors hover:text-[#27f3a9]"
         >
-          {p.nick}
+          {photo && (
+            <img
+              src={photo}
+              alt={`Foto de ${p.nick}`}
+              loading="lazy"
+              className="h-12 w-12 shrink-0 rounded-full border border-[#27f3a9]/30 object-cover"
+            />
+          )}
+          <span
+            className="truncate text-2xl font-bold tracking-wide text-white transition-colors group-hover:text-[#27f3a9]"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
+            {p.nick}
+          </span>
         </button>
         {p.founder && (
-          <span className="rounded-full border border-[#27f3a9]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#27f3a9]">
+          <span className="shrink-0 rounded-full border border-[#27f3a9]/40 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#27f3a9]">
             Titular 2012
           </span>
         )}

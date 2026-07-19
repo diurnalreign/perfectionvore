@@ -40,9 +40,9 @@ export const TIMELINE: TimelineEvent[] = [
   },
   {
     year: '2014',
-    title: 'y3 entra por vaz',
+    title: 'y3 entra por vaz; vaz emigra al CS:GO',
     description:
-      'y3 (Yessica López) sustituye a vaz en los torneos nacionales de Venezuela durante 2014.',
+      'y3 (Yessica López) sustituye a vaz en los torneos nacionales de Venezuela. vaz pasa a jugar CS:GO competitivo desde Estados Unidos.',
   },
   {
     year: '2010 – 2024',

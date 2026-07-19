@@ -55,6 +55,13 @@ export interface Player {
   founder?: boolean;
   /** Marca las fichas todavía en reconstrucción. */
   underReconstruction?: boolean;
+  /** Nombre del archivo de foto en `public/assets/players/` (ej. "niwde.jpg"). */
+  photo?: string;
+}
+
+/** URL de la foto del jugador, resuelta bajo el base del sitio (o undefined). */
+export function photoUrl(p: Player): string | undefined {
+  return p.photo ? `${import.meta.env.BASE_URL}assets/players/${p.photo}` : undefined;
 }
 
 export const PLAYERS: Player[] = [
