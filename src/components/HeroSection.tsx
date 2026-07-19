@@ -1,7 +1,8 @@
 import AnimatedBackground from './AnimatedBackground';
 
-// El logo vive en `public/assets`, así que se referencia por URL absoluta.
-const logo = '/assets/perfectionvore-logo.png';
+// El logo vive en `public/assets`. Se antepone `BASE_URL` para que la ruta
+// funcione tanto en la raíz local como bajo el subpath de GitHub Pages.
+const logo = `${import.meta.env.BASE_URL}assets/perfectionvore-logo.png`;
 
 /**
  * Hero del Hall of Fame de Perfectionvore.
