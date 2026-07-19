@@ -1,0 +1,85 @@
+# Perfectionvore — Hall of Fame
+
+Un museo digital que preserva la memoria de **Perfectionvore (pvore)** y de la escena
+competitiva de **Counter-Strike en Venezuela**: jugadores, rosters por año, torneos,
+trofeos, fotografías, logos, biografías, rivalidades y una línea de tiempo desde la
+fundación hasta el retiro.
+
+> Proyecto vivo, en reconstrucción permanente. Los datos aún no confirmados se muestran
+> marcados como tal — no inventamos información sobre personas reales.
+
+## Stack
+
+- **Vite** + **React 18** + **TypeScript**
+- **Tailwind CSS v4** (plugin oficial de Vite)
+- Fondo animado propio en `<canvas>` (sin dependencias, respeta `prefers-reduced-motion`)
+
+## Desarrollo
+
+```bash
+npm install
+npm run dev      # servidor local
+npm run build    # build de producción a /dist
+npm run preview  # previsualiza el build
+```
+
+## Estructura
+
+```
+src/
+  data/
+    players.ts     # Modelo de la ficha + roster (plantilla oficial de vaz)
+    history.ts     # Timeline, rosters por año y torneos
+  components/
+    HeroSection.tsx        # Hero con el logo + fondo animado
+    AnimatedBackground.tsx # Partículas verdes en canvas
+    RosterSection.tsx      # Grid de jugadores + rosters por año
+    PlayerCard.tsx         # Ficha corta (visible en la lista)
+    PlayerModal.tsx        # Biografía expandida (clic en el nick)
+    Timeline.tsx           # Línea de tiempo
+    TournamentsSection.tsx # Torneos y trofeos
+    SectionHeading.tsx     # Encabezado reutilizable
+    Footer.tsx
+public/
+  assets/perfectionvore-logo.png  # Logo de la orca
+```
+
+## Cómo añadir o completar un jugador
+
+Edita `src/data/players.ts`. Cada ficha sigue la **plantilla oficial**:
+
+| Campo | Emoji | Descripción |
+|-------|-------|-------------|
+| `fullName` | 👤 | Nombre completo |
+| `nick` | 🎮 | Nick |
+| `roles` / `roleLabel` | 🧩 | Rol (AWPer, IGL, Rifler, Support, Entry, Coach, Manager, Founder…) |
+| `currentCountry` | 🌎 | País de residencia actual |
+| `birthplace` | 📍 | Ciudad y país de nacimiento |
+| `games` | 🕹️ | Juegos competitivos (CS 1.6, CS:GO, CS2…) |
+| `yearsActive` | 📅 | Años activos |
+| `teams` | 🏆 | Equipos y organizaciones |
+| `goldenEra` | ⭐ | Época de oro |
+| `achievements` | 🥇 | Logros y títulos |
+| `individualAwards` | 🏅 | Premios individuales (MVP, rankings…) |
+| `profession` | 💼 | Profesión o actividad actual |
+| `knownFor` | 💬 | Conocido por (1 línea) |
+| `bio` | ▶ | Biografía completa (array de párrafos) |
+
+Los campos que dejes en `undefined` se muestran como **"Por confirmar"**, y las fichas con
+`underReconstruction: true` invitan a la comunidad a aportar datos.
+
+## Roster fundacional (2012)
+
+**vaz** (fundadora) · **skei** · **Shaquille** · **LEWKZ** · **kleox**
+Stand-ins: **guns**, **jara**.
+
+## Notas de diseño
+
+- El logo de PERFECTIONVORE se basa en la fuente **True Lies** (con kerning, contorno y
+  desgaste modificados). En la web se usa la imagen del logo; los titulares usan **Oswald**
+  como reemplazo abierto de las fuentes propietarias (True Lies / YDYoonche).
+- Paleta: negro profundo `#050706` + verde pvore `#27F3A9`.
+
+---
+
+Hecho para honrar la memoria del CS venezolano. 🇻🇪

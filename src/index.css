@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+/* ==========================================================================
+   Tema de Perfectionvore
+   - Negro profundo + verde "pvore" (#27F3A9), guiño al glow del logo.
+   ========================================================================== */
+@theme {
+  --color-void: #050706;
+  --color-ink: #0a0f0d;
+  --color-pvore: #27f3a9;
+  --color-pvore-dim: #30463c;
+  --font-display: 'Oswald', 'Bebas Neue', 'YDYoonche L', 'YDYoonche M', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050706;
+  color: #e7ece9;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Titulares con Oswald (reemplazo abierto de True Lies / YDYoonche, que son
+   propietarias); cuerpo con Inter. Ambas se cargan desde Google Fonts arriba. */
+
+/* -------------------------------------------------------------------------- */
+/*  Animaciones                                                                */
+/* -------------------------------------------------------------------------- */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 24px rgba(39, 243, 169, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 46px rgba(39, 243, 169, 0.55));
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-float {
+  animation: float 6s ease-in-out infinite;
+}
+.anim-glow {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+.anim-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Titular con degradado plateado animado, como en el brief original. */
+.gradient-title {
+  background: linear-gradient(90deg, #4a4a4a 0%, #ffffff 45%, #27f3a9 55%, #4a4a4a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 6s linear infinite alternate;
+}
+
+/* Respeta a quienes prefieren menos movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  .anim-float,
+  .anim-glow,
+  .gradient-title {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Scrollbar sutil en verde pvore. */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050706;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2b25;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #27f3a9;
+}
