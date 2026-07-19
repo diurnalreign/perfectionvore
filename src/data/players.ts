@@ -82,7 +82,10 @@ const RAW_PLAYERS: RawPlayer[] = [
     photo: 'vaz.jpg',
     roles: ['Founder', 'Player'],
     roleLabel: { es: 'Fundadora & Jugadora', en: 'Founder & Player' },
-    currentCountry: { es: 'Estados Unidos', en: 'United States' },
+    currentCountry: {
+      es: 'Fort Lauderdale, Estados Unidos',
+      en: 'Fort Lauderdale, United States',
+    },
     birthplace: 'Caracas, Venezuela',
     games: ['Counter-Strike 1.6', 'Counter-Strike: Global Offensive', 'Counter-Strike 2'],
     yearsActive: '2001 – 2019',
