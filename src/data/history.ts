@@ -38,6 +38,14 @@ const RAW_TIMELINE: RawTimelineEvent[] = [
   },
   {
     year: '2012',
+    title: { es: 'Eliana “Queen” Aponte, CEO', en: 'Eliana “Queen” Aponte, CEO' },
+    description: {
+      es: 'Eliana “Queen” Aponte se desempeñó como CEO de Perfectionvore durante toda la trayectoria de la organización.',
+      en: "Eliana “Queen” Aponte served as CEO of Perfectionvore throughout the organization's entire run.",
+    },
+  },
+  {
+    year: '2012',
     title: { es: 'La época de oro', en: 'The golden era' },
     description: {
       es: 'pvore alcanza su punto más alto y gana torneos nacionales de Venezuela con vaz, Shaquille, LEWKZ, skei y kleox. Para el Campus Party de Ecuador, se suma el dominicano NiwdE.',
