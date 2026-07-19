@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Player } from './data/players';
 import HeroSection from './components/HeroSection';
+import ChampionsFeature from './components/ChampionsFeature';
 import RosterSection from './components/RosterSection';
 import Timeline from './components/Timeline';
 import DocumentedEraSection from './components/DocumentedEraSection';
@@ -44,6 +45,7 @@ export default function App() {
 
       <main id="top">
         <HeroSection />
+        <ChampionsFeature />
         <RosterSection onOpen={setSelected} />
         <Timeline />
         <DocumentedEraSection />

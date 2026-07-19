@@ -86,6 +86,7 @@ export const PLAYERS: Player[] = [
     achievements: [
       'Múltiples títulos en torneos nacionales de Venezuela',
       'Campeonato en Campus Party Ecuador',
+      'Manager de Team USA en World Cyber Games 2012 (CS 1.6) — 2º lugar',
       'Fundación y liderazgo de Perfectionvore',
     ],
     individualAwards: [],
@@ -96,6 +97,7 @@ export const PLAYERS: Player[] = [
     bio: [
       'Alba Elena Tirado —conocida en los servidores como vaz— empezó a competir en 2001, en los días en que el Counter-Strike se jugaba en cybers, con ping alto y comunidades que se organizaban por foros y canales de IRC. Nacida en Caracas, creció junto a la primera generación del CS venezolano y terminó fundando su propio proyecto: Perfectionvore.',
       'Como fundadora y jugadora, vaz construyó pvore desde cero hasta convertirlo en un roster capaz de ganar torneos nacionales y de dejar su marca fuera de Venezuela, con un título en Campus Party Ecuador. Su carrera competitiva se extendió por casi dos décadas —de 2001 a 2019— cruzando el 1.6, el CS:GO y el CS2.',
+      'En 2012 también dirigió desde el banquillo: fue manager de Team USA en los World Cyber Games de Counter-Strike 1.6, con el que alcanzó el segundo lugar.',
       'Fuera del servidor, su trayectoria en la industria del esports fue igual de larga: trabajó en ESEA desde 2010, luego bajo ESL y finalmente dentro de ESL FACEIT Group (hasta 2024). En el camino ayudó a sostener y hacer crecer la comunidad latinoamericana de ESEA.',
       'Hoy vaz es Network Engineer en Estados Unidos, pero sigue siendo la memoria viva de Perfectionvore: el motor detrás de este Hall of Fame que busca reconstruir, jugador por jugador y torneo por torneo, toda la historia de la organización.',
     ],
