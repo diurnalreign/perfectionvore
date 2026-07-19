@@ -169,7 +169,7 @@ const RAW_PLAYERS: RawPlayer[] = [
     roles: ['Player'],
     roleLabel: { es: 'Roster principal', en: 'Main roster' },
     birthplace: 'Maracaibo, Venezuela',
-    currentCountry: 'Venezuela',
+    currentCountry: 'Maracaibo, Venezuela',
     teams: ['Perfectionvore (pvore)'],
     goldenEra: '2012',
     knownFor: {
@@ -206,7 +206,7 @@ const RAW_PLAYERS: RawPlayer[] = [
     photo: 'lewkz.jpg',
     roles: ['Player'],
     roleLabel: { es: 'Roster principal', en: 'Main roster' },
-    currentCountry: 'Venezuela',
+    currentCountry: 'Caracas, Venezuela',
     teams: ['Perfectionvore (pvore)'],
     goldenEra: '2012',
     knownFor: {
@@ -257,7 +257,7 @@ const RAW_PLAYERS: RawPlayer[] = [
       es: 'Titular en torneos nacionales (Venezuela)',
       en: 'Starter in national tournaments (Venezuela)',
     },
-    currentCountry: 'Venezuela',
+    currentCountry: 'Buenos Aires, Argentina',
     teams: ['Perfectionvore (pvore)'],
     goldenEra: '2012',
     knownFor: {
@@ -278,6 +278,8 @@ const RAW_PLAYERS: RawPlayer[] = [
       es: 'Sustituta de vaz (2014, Venezuela)',
       en: "vaz's substitute (2014, Venezuela)",
     },
+    birthplace: 'Barcelona, Venezuela',
+    currentCountry: 'Puerto La Cruz, Venezuela',
     teams: ['Perfectionvore (pvore)'],
     knownFor: {
       es: 'Sustituyó a vaz en 2014, en los torneos nacionales de Venezuela.',
