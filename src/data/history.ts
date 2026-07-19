@@ -172,7 +172,7 @@ export interface Tournament {
   year?: string;
   game?: string;
   details?: string;
-  video?: { url: string; title: string };
+  videos?: { url: string; title: string }[];
   tentative?: boolean;
 }
 
@@ -183,7 +183,7 @@ interface RawTournament {
   year?: string;
   game?: string;
   details?: LS;
-  video?: { url: string; title: LS };
+  videos?: { url: string; title: LS }[];
   tentative?: boolean;
 }
 
@@ -198,13 +198,22 @@ const RAW_TOURNAMENTS: RawTournament[] = [
       es: '19–23 de septiembre de 2012. Pozo total de $2,550. pvore terminó 1º por delante de Make it Happen (2º).',
       en: 'September 19–23, 2012. Total prize pool of $2,550. pvore finished 1st ahead of Make it Happen (2nd).',
     },
-    video: {
-      url: 'https://www.youtube-nocookie.com/embed/-xTG9Aex9Is',
-      title: {
-        es: 'Entrevista a Perfectionvore en Campus Party 2012',
-        en: 'Interview with Perfectionvore at Campus Party 2012',
+    videos: [
+      {
+        url: 'https://player.vimeo.com/video/58796578',
+        title: {
+          es: 'Movie de Perfectionvore — CS 1.6 (Campus Party Quito 2012)',
+          en: 'Perfectionvore movie — CS 1.6 (Campus Party Quito 2012)',
+        },
       },
-    },
+      {
+        url: 'https://www.youtube-nocookie.com/embed/-xTG9Aex9Is',
+        title: {
+          es: 'Entrevista a Perfectionvore en Campus Party 2012',
+          en: 'Interview with Perfectionvore at Campus Party 2012',
+        },
+      },
+    ],
   },
   {
     name: { es: 'Torneos Nacionales de Venezuela', en: 'Venezuela National Tournaments' },
@@ -222,7 +231,9 @@ export function getTournaments(lang: Lang): Tournament[] {
     year: t.year,
     game: t.game,
     details: L(t.details, lang),
-    video: t.video ? { url: t.video.url, title: L(t.video.title, lang) } : undefined,
+    videos: t.videos
+      ? t.videos.map((v) => ({ url: v.url, title: L(v.title, lang) }))
+      : undefined,
     tentative: t.tentative,
   }));
 }

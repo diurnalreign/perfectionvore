@@ -32,16 +32,16 @@ export default function TournamentsSection() {
         ))}
       </div>
 
-      {/* Entrevistas / archivo en video */}
+      {/* Movies / entrevistas / archivo en video */}
       {tournaments
-        .filter((tt) => tt.video)
-        .map((tt) => (
-          <div key={`${tt.name}-video`} className="mx-auto mt-12 max-w-3xl">
+        .flatMap((tt) => tt.videos ?? [])
+        .map((v) => (
+          <div key={v.url} className="mx-auto mt-12 max-w-3xl">
             <h3
               className="mb-4 text-center text-lg font-semibold text-white"
               style={{ fontFamily: "'Oswald', sans-serif" }}
             >
-              🎥 {tt.video!.title}
+              🎥 {v.title}
             </h3>
             <div
               className="relative w-full overflow-hidden rounded-2xl border border-[#17241f]"
@@ -49,8 +49,8 @@ export default function TournamentsSection() {
             >
               <iframe
                 className="absolute inset-0 h-full w-full"
-                src={tt.video!.url}
-                title={tt.video!.title}
+                src={v.url}
+                title={v.title}
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
