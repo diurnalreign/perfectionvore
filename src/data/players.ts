@@ -303,6 +303,7 @@ const RAW_PLAYERS: RawPlayer[] = [
   {
     id: 'jara',
     nationality: 'VE',
+    fullName: 'Eduardo Jaramillo',
     nick: 'jara',
     roles: ['Player'],
     roleLabel: 'Stand-in',
