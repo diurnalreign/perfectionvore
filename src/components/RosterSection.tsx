@@ -1,28 +1,32 @@
 import type { Player } from '../data/players';
-import { PLAYERS } from '../data/players';
-import { ROSTERS } from '../data/history';
+import { getRosters } from '../data/history';
+import { useLang } from '../i18n';
 import PlayerCard from './PlayerCard';
 import SectionHeading from './SectionHeading';
 
 interface Props {
+  players: Player[];
   onOpen: (p: Player) => void;
 }
 
-export default function RosterSection({ onOpen }: Props) {
+export default function RosterSection({ players, onOpen }: Props) {
+  const { lang, t } = useLang();
+  const rosters = getRosters(lang);
+
   // Titulares primero, luego el resto.
-  const ordered = [...PLAYERS].sort((a, b) => Number(!!b.founder) - Number(!!a.founder));
+  const ordered = [...players].sort((a, b) => Number(!!b.founder) - Number(!!a.founder));
 
   return (
     <section id="roster" className="mx-auto max-w-6xl px-4 py-24">
       <SectionHeading
-        kicker="El equipo"
-        title="Roster & Hall of Fame"
-        subtitle="Cada integrante que pasó por Perfectionvore. Haz clic en un nick para su biografía completa."
+        kicker={t('roster.kicker')}
+        title={t('roster.title')}
+        subtitle={t('roster.subtitle')}
       />
 
       {/* Rosters por año */}
       <div className="mb-14 grid gap-4">
-        {ROSTERS.map((r, i) => (
+        {rosters.map((r, i) => (
           <div
             key={`${r.year}-${i}`}
             className="rounded-2xl border border-[#17241f] bg-[#0a0f0d]/60 p-5"
@@ -42,7 +46,7 @@ export default function RosterSection({ onOpen }: Props) {
               {r.starters.join(' · ')}
               {r.standins && (
                 <span className="text-[#8aa79b]">
-                  {'  '}— stand-ins: {r.standins.join(', ')}
+                  {'  '}— {t('roster.standins')}: {r.standins.join(', ')}
                 </span>
               )}
             </p>

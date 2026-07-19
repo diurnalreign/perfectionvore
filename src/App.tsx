@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import type { Player } from './data/players';
+import { getPlayers } from './data/players';
+import { useLang } from './i18n';
 import HeroSection from './components/HeroSection';
 import ChampionsFeature from './components/ChampionsFeature';
 import RosterSection from './components/RosterSection';
@@ -9,15 +10,19 @@ import TournamentsSection from './components/TournamentsSection';
 import PlayerModal from './components/PlayerModal';
 import Footer from './components/Footer';
 
-const NAV = [
-  { href: '#roster', label: 'Roster' },
-  { href: '#timeline', label: 'Historia' },
-  { href: '#csgo', label: 'Era CS:GO' },
-  { href: '#torneos', label: 'Torneos' },
-];
-
 export default function App() {
-  const [selected, setSelected] = useState<Player | null>(null);
+  const { lang, toggle, t } = useLang();
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+
+  const players = getPlayers(lang);
+  const selected = selectedId ? players.find((p) => p.id === selectedId) ?? null : null;
+
+  const nav = [
+    { href: '#roster', label: t('nav.roster') },
+    { href: '#timeline', label: t('nav.history') },
+    { href: '#csgo', label: t('nav.csgo') },
+    { href: '#torneos', label: t('nav.tournaments') },
+  ];
 
   return (
     <div className="min-h-screen bg-[#050706]">
@@ -31,22 +36,33 @@ export default function App() {
           >
             pvore
           </a>
-          <ul className="flex gap-5 text-sm text-[#aebcb5]">
-            {NAV.map((n) => (
-              <li key={n.href}>
-                <a href={n.href} className="transition-colors hover:text-[#27f3a9]">
-                  {n.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-5">
+            <ul className="hidden gap-5 text-sm text-[#aebcb5] sm:flex">
+              {nav.map((n) => (
+                <li key={n.href}>
+                  <a href={n.href} className="transition-colors hover:text-[#27f3a9]">
+                    {n.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button
+              onClick={toggle}
+              aria-label={t('lang.switchTo')}
+              title={t('lang.switchTo')}
+              className="flex items-center gap-1.5 rounded-full border border-[#27f3a9]/40 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#27f3a9] transition-colors hover:bg-[#27f3a9]/10"
+            >
+              <span aria-hidden="true">🌐</span>
+              {lang === 'es' ? 'EN' : 'ES'}
+            </button>
+          </div>
         </div>
       </nav>
 
       <main id="top">
         <HeroSection />
         <ChampionsFeature />
-        <RosterSection onOpen={setSelected} />
+        <RosterSection players={players} onOpen={(p) => setSelectedId(p.id)} />
         <Timeline />
         <DocumentedEraSection />
         <TournamentsSection />
@@ -54,7 +70,7 @@ export default function App() {
 
       <Footer />
 
-      <PlayerModal player={selected} onClose={() => setSelected(null)} />
+      <PlayerModal player={selected} onClose={() => setSelectedId(null)} />
     </div>
   );
 }

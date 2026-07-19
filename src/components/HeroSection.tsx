@@ -1,4 +1,5 @@
 import AnimatedBackground from './AnimatedBackground';
+import { useLang } from '../i18n';
 
 // El logo vive en `public/assets`. Se antepone `BASE_URL` para que la ruta
 // funcione tanto en la raíz local como bajo el subpath de GitHub Pages.
@@ -13,6 +14,7 @@ const logo = `${import.meta.env.BASE_URL}assets/perfectionvore-logo.png`;
  * usa el logo de la orca + un fondo animado de partículas propio.
  */
 export default function HeroSection() {
+  const { t } = useLang();
   return (
     <section
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center"
@@ -79,9 +81,9 @@ export default function HeroSection() {
             fontWeight: 400,
           }}
         >
-          Preservamos la memoria de <strong style={{ color: '#fff' }}>pvore</strong> y de la
-          escena competitiva de Counter-Strike en Venezuela: sus jugadores, sus rosters, sus
-          torneos y su historia — desde 2001 hasta el retiro.
+          {t('hero.introPre')}
+          <strong style={{ color: '#fff' }}>pvore</strong>
+          {t('hero.introPost')}
         </p>
 
         <a
@@ -103,9 +105,7 @@ export default function HeroSection() {
             textDecoration: 'none',
           }}
         >
-          <span style={{ color: '#fff', fontSize: 15, fontWeight: 500 }}>
-            Conoce el roster
-          </span>
+          <span style={{ color: '#fff', fontSize: 15, fontWeight: 500 }}>{t('hero.cta')}</span>
           <span aria-hidden="true" style={{ color: '#27f3a9' }}>
             ↓
           </span>

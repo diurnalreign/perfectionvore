@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import type { Player } from '../data/players';
 import { roleText, photoUrl } from '../data/players';
+import { useLang } from '../i18n';
 import Flag from './Flag';
 
 interface Props {
@@ -42,6 +43,8 @@ function ListField({ icon, label, items }: { icon: string; label: string; items?
 
 /** Modal con la biografía completa del jugador. */
 export default function PlayerModal({ player, onClose }: Props) {
+  const { t } = useLang();
+
   useEffect(() => {
     if (!player) return;
     const onKey = (e: KeyboardEvent) => {
@@ -64,7 +67,7 @@ export default function PlayerModal({ player, onClose }: Props) {
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label={`Biografía de ${p.nick}`}
+      aria-label={p.nick}
     >
       <div
         className="anim-fade-up relative my-8 w-full max-w-2xl rounded-3xl border border-[#27f3a9]/25 bg-[#0a0f0d] p-6 shadow-[0_20px_80px_-20px_rgba(39,243,169,0.4)] sm:p-9"
@@ -72,7 +75,7 @@ export default function PlayerModal({ player, onClose }: Props) {
       >
         <button
           onClick={onClose}
-          aria-label="Cerrar"
+          aria-label={t('modal.close')}
           className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-[#17241f] text-lg text-[#8aa79b] transition-colors hover:border-[#27f3a9] hover:text-[#27f3a9]"
         >
           ✕
@@ -82,7 +85,7 @@ export default function PlayerModal({ player, onClose }: Props) {
           {photoUrl(p) && (
             <img
               src={photoUrl(p)}
-              alt={`Foto de ${p.nick}`}
+              alt={p.nick}
               className="h-20 w-20 shrink-0 rounded-2xl border border-[#27f3a9]/30 object-cover sm:h-24 sm:w-24"
             />
           )}
@@ -102,20 +105,20 @@ export default function PlayerModal({ player, onClose }: Props) {
         </header>
 
         <div className="grid gap-2 sm:grid-cols-2">
-          <Field icon="🌎" label="País actual" value={p.currentCountry} />
-          <Field icon="📍" label="Nacimiento" value={p.birthplace} />
-          <Field icon="📅" label="Años activos" value={p.yearsActive} />
-          <Field icon="⭐" label="Época de oro" value={p.goldenEra} />
-          <Field icon="🕹️" label="Juegos" value={p.games?.join(', ')} />
-          <Field icon="🏆" label="Equipos" value={p.teams?.join(', ')} />
-          <Field icon="💼" label="Actividad actual" value={p.profession} />
+          <Field icon="🌎" label={t('modal.currentCountry')} value={p.currentCountry} />
+          <Field icon="📍" label={t('modal.birthplace')} value={p.birthplace} />
+          <Field icon="📅" label={t('modal.yearsActive')} value={p.yearsActive} />
+          <Field icon="⭐" label={t('modal.goldenEra')} value={p.goldenEra} />
+          <Field icon="🕹️" label={t('modal.games')} value={p.games?.join(', ')} />
+          <Field icon="🏆" label={t('modal.teams')} value={p.teams?.join(', ')} />
+          <Field icon="💼" label={t('modal.currentActivity')} value={p.profession} />
         </div>
 
         <div className="mt-4 grid gap-3">
-          <ListField icon="🥇" label="Logros y títulos" items={p.achievements} />
+          <ListField icon="🥇" label={t('modal.achievements')} items={p.achievements} />
           <ListField
             icon="🏅"
-            label="Premios individuales"
+            label={t('modal.individualAwards')}
             items={p.individualAwards && p.individualAwards.length > 0 ? p.individualAwards : undefined}
           />
         </div>
@@ -134,9 +137,7 @@ export default function PlayerModal({ player, onClose }: Props) {
           </div>
         ) : (
           <div className="mt-6 border-t border-[#17241f] pt-6 text-[15px] leading-relaxed text-[#c9a54a]">
-            🚧 La biografía completa de <strong>{p.nick}</strong> está en reconstrucción. Si
-            compartiste servidor, torneos o recuerdos con {p.nick}, tu aporte ayuda a completar
-            esta historia.
+            {t('modal.bioReconstruction').replace(/\{nick\}/g, p.nick)}
           </div>
         )}
       </div>

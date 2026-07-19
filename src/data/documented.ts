@@ -1,92 +1,140 @@
 // ============================================================================
-//  Era CS:GO de Perfectionvore — REGISTRO PÚBLICO
-//
-//  A diferencia de `history.ts` (memoria de la escena 1.6, confirmada por vaz),
-//  estos datos provienen de fuentes públicas externas: Liquipedia y HLTV.
-//  Documentan a la organización Perfectionvore durante su etapa de CS:GO
-//  (2015–2017), con rosters mayormente argentinos y latinoamericanos.
-//
-//  Fuentes:
-//   - https://liquipedia.net/counterstrike/Perfectionvore
-//   - https://www.hltv.org/stats/teams/5092/Perfectionvore
+//  Era CS:GO de Perfectionvore — REGISTRO PÚBLICO (bilingüe)
+//  Fuentes: Liquipedia y HLTV. `getDocumented*(lang)` resuelven al idioma.
 // ============================================================================
 
-/** Datos generales de la organización según el registro público. */
-export const DOCUMENTED_ORG = {
+import { L, type Lang, type LS } from '../i18n';
+
+export interface DocumentedOrg {
+  founded: string;
+  base: string;
+  disbanded: string;
+  disbandNote: string;
+  source: string;
+}
+
+const RAW_ORG = {
   founded: '2010',
-  base: 'Venezuela (sede en Miami, EE. UU.)',
-  disbanded: '10 de septiembre de 2017',
-  disbandNote: 'La marca Perfectionvore fue adquirida por Miami Flamingos.',
+  base: { es: 'Venezuela (sede en Miami, EE. UU.)', en: 'Venezuela (HQ in Miami, USA)' } as LS,
+  disbanded: { es: '10 de septiembre de 2017', en: 'September 10, 2017' } as LS,
+  disbandNote: {
+    es: 'La marca Perfectionvore fue adquirida por Miami Flamingos.',
+    en: 'The Perfectionvore brand was acquired by Miami Flamingos.',
+  } as LS,
   source: 'https://liquipedia.net/counterstrike/Perfectionvore',
 };
 
+export function getDocumentedOrg(lang: Lang): DocumentedOrg {
+  return {
+    founded: RAW_ORG.founded,
+    base: L(RAW_ORG.base, lang),
+    disbanded: L(RAW_ORG.disbanded, lang),
+    disbandNote: L(RAW_ORG.disbandNote, lang),
+    source: RAW_ORG.source,
+  };
+}
+
 export interface DocumentedEvent {
-  /** Fecha tal como aparece documentada. */
   date: string;
   title: string;
   description: string;
 }
 
-/**
- * Movimientos de roster y hitos documentados de la etapa CS:GO.
- * Redactado a partir del historial público de Liquipedia.
- */
-export const DOCUMENTED_TIMELINE: DocumentedEvent[] = [
+interface RawDocumentedEvent {
+  date: LS;
+  title: LS;
+  description: LS;
+}
+
+const RAW_TIMELINE: RawDocumentedEvent[] = [
   {
-    date: '1 ago 2015',
-    title: 'Fichaje del quinteto argentino',
-    description:
-      'Perfectionvore firma a un equipo argentino formado por JonY BoY, Sheep, minimal, dinamo y NCH.',
+    date: { es: '1 ago 2015', en: 'Aug 1, 2015' },
+    title: { es: 'Fichaje del quinteto argentino', en: 'Signing of the Argentine five' },
+    description: {
+      es: 'Perfectionvore firma a un equipo argentino formado por JonY BoY, Sheep, minimal, dinamo y NCH.',
+      en: 'Perfectionvore signs an Argentine team: JonY BoY, Sheep, minimal, dinamo and NCH.',
+    },
   },
   {
-    date: '25 ago 2015',
-    title: 'Primeros cambios',
-    description: 'dinamo se marcha; entran NikoM y gianco.',
+    date: { es: '25 ago 2015', en: 'Aug 25, 2015' },
+    title: { es: 'Primeros cambios', en: 'First changes' },
+    description: {
+      es: 'dinamo se marcha; entran NikoM y gianco.',
+      en: 'dinamo leaves; NikoM and gianco join.',
+    },
   },
   {
-    date: '2 oct 2015',
-    title: 'Reestructuración',
-    description: 'Entran Alexze y Reversive; salen gianco y NikoM.',
+    date: { es: '2 oct 2015', en: 'Oct 2, 2015' },
+    title: { es: 'Reestructuración', en: 'Reshuffle' },
+    description: {
+      es: 'Entran Alexze y Reversive; salen gianco y NikoM.',
+      en: 'Alexze and Reversive join; gianco and NikoM leave.',
+    },
   },
   {
-    date: '29 oct 2015',
-    title: 'Último ajuste del año',
-    description: 'NCH deja el equipo y llega Guishorro.',
+    date: { es: '29 oct 2015', en: 'Oct 29, 2015' },
+    title: { es: 'Último ajuste del año', en: 'Last change of the year' },
+    description: {
+      es: 'NCH deja el equipo y llega Guishorro.',
+      en: 'NCH leaves the team and Guishorro arrives.',
+    },
   },
   {
-    date: '7 dic 2015',
-    title: 'Fin de la etapa argentina',
-    description: 'Perfectionvore se separa de su escuadra argentina.',
+    date: { es: '7 dic 2015', en: 'Dec 7, 2015' },
+    title: { es: 'Fin de la etapa argentina', en: 'End of the Argentine era' },
+    description: {
+      es: 'Perfectionvore se separa de su escuadra argentina.',
+      en: 'Perfectionvore parts ways with its Argentine squad.',
+    },
   },
   {
-    date: '18 dic 2015',
-    title: 'Nuevo proyecto latinoamericano',
-    description:
-      'La organización firma un equipo latinoamericano, cuatro de cuyos jugadores residían en Estados Unidos.',
+    date: { es: '18 dic 2015', en: 'Dec 18, 2015' },
+    title: { es: 'Nuevo proyecto latinoamericano', en: 'New Latin American project' },
+    description: {
+      es: 'La organización firma un equipo latinoamericano, cuatro de cuyos jugadores residían en Estados Unidos.',
+      en: 'The organization signs a Latin American team, four of whose players lived in the United States.',
+    },
   },
   {
-    date: '9 ene 2016',
-    title: 'Escuadra multinacional',
-    description:
-      'Se anuncia un roster latinoamericano compuesto por jugadores costarricenses, guatemaltecos y venezolanos.',
+    date: { es: '9 ene 2016', en: 'Jan 9, 2016' },
+    title: { es: 'Escuadra multinacional', en: 'Multinational squad' },
+    description: {
+      es: 'Se anuncia un roster latinoamericano compuesto por jugadores costarricenses, guatemaltecos y venezolanos.',
+      en: 'A Latin American roster is announced, made up of Costa Rican, Guatemalan and Venezuelan players.',
+    },
   },
   {
-    date: '10 sep 2017',
-    title: 'Cierre de la marca',
-    description: 'Miami Flamingos compra la marca Perfectionvore.',
+    date: { es: '10 sep 2017', en: 'Sep 10, 2017' },
+    title: { es: 'Cierre de la marca', en: 'The brand closes' },
+    description: {
+      es: 'Miami Flamingos compra la marca Perfectionvore.',
+      en: 'Miami Flamingos buys the Perfectionvore brand.',
+    },
   },
 ];
 
+export function getDocumentedTimeline(lang: Lang): DocumentedEvent[] {
+  return RAW_TIMELINE.map((e) => ({
+    date: L(e.date, lang),
+    title: L(e.title, lang),
+    description: L(e.description, lang),
+  }));
+}
+
 export interface DocumentedPlayer {
   nick: string;
-  /** Nombre real si está documentado públicamente. */
   realName?: string;
   note?: string;
 }
 
-/** Jugadores que aparecen en el registro público de la etapa CS:GO. */
-export const DOCUMENTED_PLAYERS: DocumentedPlayer[] = [
-  { nick: 'JonY BoY', realName: 'Jonathan Muñoz', note: 'AWPer argentino' },
+interface RawDocumentedPlayer {
+  nick: string;
+  realName?: string;
+  note?: LS;
+}
+
+const RAW_PLAYERS: RawDocumentedPlayer[] = [
+  { nick: 'JonY BoY', realName: 'Jonathan Muñoz', note: { es: 'AWPer argentino', en: 'Argentine AWPer' } },
   { nick: 'Sheep' },
   { nick: 'minimal' },
   { nick: 'dinamo' },
@@ -97,3 +145,11 @@ export const DOCUMENTED_PLAYERS: DocumentedPlayer[] = [
   { nick: 'Reversive' },
   { nick: 'Guishorro' },
 ];
+
+export function getDocumentedPlayers(lang: Lang): DocumentedPlayer[] {
+  return RAW_PLAYERS.map((p) => ({
+    nick: p.nick,
+    realName: p.realName,
+    note: L(p.note, lang),
+  }));
+}
