@@ -3,6 +3,7 @@ import type { Player } from './data/players';
 import HeroSection from './components/HeroSection';
 import RosterSection from './components/RosterSection';
 import Timeline from './components/Timeline';
+import DocumentedEraSection from './components/DocumentedEraSection';
 import TournamentsSection from './components/TournamentsSection';
 import PlayerModal from './components/PlayerModal';
 import Footer from './components/Footer';
@@ -10,6 +11,7 @@ import Footer from './components/Footer';
 const NAV = [
   { href: '#roster', label: 'Roster' },
   { href: '#timeline', label: 'Historia' },
+  { href: '#csgo', label: 'Era CS:GO' },
   { href: '#torneos', label: 'Torneos' },
 ];
 
@@ -44,6 +46,7 @@ export default function App() {
         <HeroSection />
         <RosterSection onOpen={setSelected} />
         <Timeline />
+        <DocumentedEraSection />
         <TournamentsSection />
       </main>
 

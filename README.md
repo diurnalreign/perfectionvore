@@ -95,11 +95,24 @@ Los campos que dejes en `undefined` se muestran como **"Por confirmar"**, y las 
 **vaz** (fundadora) · **skei** · **Shaquille** · **LEWKZ** · **kleox**
 Stand-ins: **guns**, **jara**.
 
+## Era CS:GO (registro público)
+
+Además de la memoria de la escena 1.6 (confirmada por vaz), el sitio incluye una sección
+aparte —**"Era CS:GO · 2015–2017"**— con los datos **documentados públicamente** de la
+organización durante su etapa en Counter-Strike: Global Offensive (rosters argentinos y
+latinoamericanos, cierre en 2017). Vive en `src/data/documented.ts` +
+`src/components/DocumentedEraSection.tsx` y está **atribuida a su fuente**
+([Liquipedia](https://liquipedia.net/counterstrike/Perfectionvore) /
+[HLTV](https://www.hltv.org/stats/teams/5092/Perfectionvore)) para no mezclarla con la
+narrativa de la comunidad.
+
 ## Notas de diseño
 
-- El logo de PERFECTIONVORE se basa en la fuente **True Lies** (con kerning, contorno y
-  desgaste modificados). En la web se usa la imagen del logo; los titulares usan **Oswald**
-  como reemplazo abierto de las fuentes propietarias (True Lies / YDYoonche).
+- El logo de PERFECTIONVORE se basa en la fuente **True Lies**. El wordmark del Hero usa esa
+  misma fuente vía `@font-face` (ver `src/index.css`); el archivo se coloca en
+  `public/assets/fonts/` y **no** se versiona (licencia *free for personal use*). Mientras no
+  esté presente, cae automáticamente en **Oswald**, así que la web nunca se rompe.
+- El resto de titulares usan **Oswald** como reemplazo abierto de las fuentes propietarias.
 - Paleta: negro profundo `#050706` + verde pvore `#27F3A9`.
 
 ---

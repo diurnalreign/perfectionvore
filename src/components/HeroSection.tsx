@@ -42,8 +42,8 @@ export default function HeroSection() {
         <h1
           className="gradient-title mt-2 leading-none"
           style={{
-            fontFamily:
-              "'Oswald', 'YDYoonche L', 'YDYoonche M', sans-serif",
+            // True Lies (el font del logo); cae en Oswald hasta subir el archivo.
+            fontFamily: "'True Lies', 'Oswald', 'YDYoonche L', sans-serif",
             fontSize: 'clamp(2.6rem, 10vw, 7rem)',
             fontWeight: 700,
             letterSpacing: '0.06em',
