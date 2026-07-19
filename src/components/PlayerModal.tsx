@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import type { Player } from '../data/players';
 import { roleText, photoUrl } from '../data/players';
+import Flag from './Flag';
 
 interface Props {
   player: Player | null;
@@ -87,10 +88,11 @@ export default function PlayerModal({ player, onClose }: Props) {
           )}
           <div className="min-w-0">
             <h2
-              className="text-4xl font-bold text-white"
+              className="flex items-center gap-3 text-4xl font-bold text-white"
               style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: '0.03em' }}
             >
               {p.nick}
+              {p.nationality && <Flag code={p.nationality} className="h-5 w-8 shrink-0" />}
             </h2>
             {p.fullName && <p className="mt-1 text-[#8aa79b]">{p.fullName}</p>}
             <p className="mt-2 inline-block rounded-full border border-[#27f3a9]/40 px-3 py-1 text-xs uppercase tracking-widest text-[#27f3a9]">

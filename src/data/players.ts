@@ -7,6 +7,8 @@
 //  no inventamos datos sobre personas reales.
 // ============================================================================
 
+import type { CountryCode } from '../components/Flag';
+
 export type Role =
   | 'AWPer'
   | 'IGL'
@@ -57,6 +59,8 @@ export interface Player {
   underReconstruction?: boolean;
   /** Nombre del archivo de foto en `public/assets/players/` (ej. "niwde.jpg"). */
   photo?: string;
+  /** Nacionalidad (para la banderita). */
+  nationality?: CountryCode;
 }
 
 /** URL de la foto del jugador, resuelta bajo el base del sitio (o undefined). */
@@ -67,6 +71,7 @@ export function photoUrl(p: Player): string | undefined {
 export const PLAYERS: Player[] = [
   {
     id: 'vaz',
+    nationality: 'VE',
     fullName: 'Alba Elena Tirado',
     nick: 'vaz',
     photo: 'vaz.jpg',
@@ -97,6 +102,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'skei',
+    nationality: 'VE',
     fullName: 'Roberto Bracho',
     nick: 'skei',
     photo: 'skei.jpg',
@@ -111,6 +117,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'shaquille',
+    nationality: 'VE',
     fullName: 'Jesus Arizmendi',
     nick: 'Shaquille',
     photo: 'shaquille.jpg',
@@ -125,6 +132,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'lewkz',
+    nationality: 'VE',
     fullName: 'Antonio Serrano',
     nick: 'LEWKZ',
     photo: 'lewkz.jpg',
@@ -139,6 +147,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'niwde',
+    nationality: 'DO',
     fullName: 'Edwin Mateo',
     nick: 'NiwdE',
     photo: 'niwde.jpg',
@@ -156,6 +165,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'kleox',
+    nationality: 'VE',
     nick: 'kleox',
     roles: ['Player'],
     roleLabel: 'Titular en torneos nacionales (Venezuela)',
@@ -168,6 +178,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'y3',
+    nationality: 'VE',
     fullName: 'Yessica López',
     nick: 'y3',
     photo: 'y3.jpg',
@@ -180,6 +191,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'guns',
+    nationality: 'VE',
     nick: 'guns',
     roles: ['Player'],
     roleLabel: 'Stand-in',
@@ -189,6 +201,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'jara',
+    nationality: 'VE',
     nick: 'jara',
     roles: ['Player'],
     roleLabel: 'Stand-in',

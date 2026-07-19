@@ -1,5 +1,6 @@
 import type { Player } from '../data/players';
 import { roleText, photoUrl } from '../data/players';
+import Flag from './Flag';
 
 interface Props {
   player: Player;
@@ -40,6 +41,7 @@ export default function PlayerCard({ player, onOpen }: Props) {
               className="h-12 w-12 shrink-0 rounded-full border border-[#27f3a9]/30 object-cover"
             />
           )}
+          {p.nationality && <Flag code={p.nationality} className="h-4 w-6 shrink-0" />}
           <span
             className="truncate text-2xl font-bold tracking-wide text-white transition-colors group-hover:text-[#27f3a9]"
             style={{ fontFamily: "'Oswald', sans-serif" }}
