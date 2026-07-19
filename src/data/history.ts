@@ -30,14 +30,20 @@ export const TIMELINE: TimelineEvent[] = [
     year: '2012',
     title: 'La época de oro',
     description:
-      'El roster titular —vaz, skei, Shaquille, LEWKZ y kleox— alcanza su punto más alto y gana torneos nacionales. En algunos eventos entran guns y jara como stand-ins.',
+      'El roster principal —vaz, Shaquille, LEWKZ, skei y NiwdE— alcanza su punto más alto y gana torneos nacionales. En Venezuela, kleox entra como stand-in.',
   },
   {
     year: '2012+',
     title: 'Campus Party Ecuador',
     description:
-      'pvore lleva su nombre fuera de Venezuela y se corona campeón en Campus Party Ecuador.',
+      'pvore lleva su nombre fuera de Venezuela y se corona campeón en Campus Party Ecuador con su quinteto principal (vaz, Shaquille, LEWKZ, skei y NiwdE).',
     tentative: true,
+  },
+  {
+    year: '2014',
+    title: 'y3 entra por vaz',
+    description:
+      'y3 (Yessica López) sustituye a vaz en los torneos nacionales de Venezuela durante 2014.',
   },
   {
     year: '2010 – 2024',
@@ -64,10 +70,23 @@ export interface RosterYear {
 export const ROSTERS: RosterYear[] = [
   {
     year: '2012',
-    label: 'Roster titular',
-    starters: ['vaz', 'skei', 'Shaquille', 'LEWKZ', 'kleox'],
-    standins: ['guns', 'jara'],
-    note: 'El quinteto de la época de oro. Stand-ins en torneos puntuales.',
+    label: 'Roster principal · Campus Party Ecuador',
+    starters: ['vaz', 'Shaquille', 'LEWKZ', 'skei', 'NiwdE'],
+    note: 'El quinteto principal; la alineación que representó a pvore en Campus Party Ecuador.',
+  },
+  {
+    year: '2012+',
+    label: 'Torneos nacionales · Venezuela',
+    starters: ['vaz', 'Shaquille', 'LEWKZ', 'skei', 'NiwdE'],
+    standins: ['kleox', 'guns', 'jara'],
+    note: 'En Venezuela, kleox entraba como stand-in.',
+  },
+  {
+    year: '2014',
+    label: 'Torneos nacionales · Venezuela (2014)',
+    starters: ['y3', 'Shaquille', 'LEWKZ', 'skei', 'NiwdE'],
+    standins: ['kleox', 'guns', 'jara'],
+    note: 'En 2014, y3 (Yessica López) sustituyó a vaz en los torneos nacionales de Venezuela.',
   },
 ];
 

@@ -90,10 +90,14 @@ Edita `src/data/players.ts`. Cada ficha sigue la **plantilla oficial**:
 Los campos que dejes en `undefined` se muestran como **"Por confirmar"**, y las fichas con
 `underReconstruction: true` invitan a la comunidad a aportar datos.
 
-## Roster fundacional (2012)
+## Roster principal (2012)
 
-**vaz** (fundadora) · **skei** · **Shaquille** · **LEWKZ** · **kleox**
-Stand-ins: **guns**, **jara**.
+**vaz** (fundadora, Alba Tirado) · **Shaquille** (Jesus Arizmendi) · **LEWKZ** (Antonio Serrano)
+· **skei** (Roberto Bracho) · **NiwdE** (Edwin Mateo)
+
+Quinteto que representó a pvore en **Campus Party Ecuador**. En los torneos nacionales de
+**Venezuela**, **kleox** entraba como stand-in (junto a **guns** y **jara**). En **2014**,
+**y3** (Yessica López) sustituyó a vaz en los torneos nacionales.
 
 ## Era CS:GO (registro público)
 
@@ -108,10 +112,11 @@ narrativa de la comunidad.
 
 ## Notas de diseño
 
-- El logo de PERFECTIONVORE se basa en la fuente **True Lies**. El wordmark del Hero usa esa
-  misma fuente vía `@font-face` (ver `src/index.css`); el archivo se coloca en
-  `public/assets/fonts/` y **no** se versiona (licencia *free for personal use*). Mientras no
-  esté presente, cae automáticamente en **Oswald**, así que la web nunca se rompe.
+- El logo y el wordmark de PERFECTIONVORE usan la fuente **True Lies** vía `@font-face`
+  (ver `src/index.css`); los archivos viven en `public/assets/fonts/` junto a su licencia.
+  Si el font no cargara, cae automáticamente en **Oswald**, así que la web nunca se rompe.
+  *Nota de licencia:* True Lies es *free for personal use* (TattooWoo.com); ver
+  `public/assets/fonts/LICENSE-True-Lies.txt`.
 - El resto de titulares usan **Oswald** como reemplazo abierto de las fuentes propietarias.
 - Paleta: negro profundo `#050706` + verde pvore `#27F3A9`.
 

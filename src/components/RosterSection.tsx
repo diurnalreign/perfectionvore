@@ -22,9 +22,9 @@ export default function RosterSection({ onOpen }: Props) {
 
       {/* Rosters por año */}
       <div className="mb-14 grid gap-4">
-        {ROSTERS.map((r) => (
+        {ROSTERS.map((r, i) => (
           <div
-            key={r.year}
+            key={`${r.year}-${i}`}
             className="rounded-2xl border border-[#17241f] bg-[#0a0f0d]/60 p-5"
           >
             <div className="flex flex-wrap items-center gap-3">
