@@ -1,8 +1,9 @@
-export type CountryCode = 'VE' | 'DO';
+export type CountryCode = 'VE' | 'DO' | 'US';
 
 const NAMES: Record<CountryCode, string> = {
   VE: 'Venezuela',
   DO: 'República Dominicana',
+  US: 'Estados Unidos',
 };
 
 /**
@@ -24,7 +25,7 @@ export default function Flag({
       title={NAMES[code]}
       className={`inline-block overflow-hidden rounded-[3px] ring-1 ring-black/30 ${className}`}
     >
-      {code === 'VE' ? <Venezuela /> : <Dominicana />}
+      {code === 'VE' ? <Venezuela /> : code === 'DO' ? <Dominicana /> : <EstadosUnidos />}
     </span>
   );
 }
@@ -41,6 +42,35 @@ function Venezuela() {
       <rect width="30" height="20" fill="#cf142b" />
       <rect width="30" height="13.34" fill="#00247d" />
       <rect width="30" height="6.67" fill="#fcdb00" />
+      {stars}
+    </svg>
+  );
+}
+
+function EstadosUnidos() {
+  const h = 20 / 13; // 13 franjas
+  const stripes = Array.from({ length: 13 }, (_, i) => (
+    <rect key={i} x="0" y={i * h} width="30" height={h} fill={i % 2 === 0 ? '#b22234' : '#fff'} />
+  ));
+  // Cantón azul: 7 franjas de alto, ~2/5 de ancho.
+  const cantonH = 7 * h;
+  const stars = Array.from({ length: 20 }, (_, i) => {
+    const r = Math.floor(i / 5);
+    const c = i % 5;
+    return (
+      <circle
+        key={i}
+        cx={1.3 + c * 2.35}
+        cy={1.3 + r * ((cantonH - 2.6) / 3)}
+        r={0.42}
+        fill="#fff"
+      />
+    );
+  });
+  return (
+    <svg viewBox="0 0 30 20" className="h-full w-full" preserveAspectRatio="none">
+      {stripes}
+      <rect x="0" y="0" width="12" height={cantonH} fill="#3c3b6e" />
       {stars}
     </svg>
   );

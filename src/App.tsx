@@ -6,6 +6,7 @@ import RosterSection from './components/RosterSection';
 import Timeline from './components/Timeline';
 import DocumentedEraSection from './components/DocumentedEraSection';
 import TournamentsSection from './components/TournamentsSection';
+import TeamUSAFeature from './components/TeamUSAFeature';
 import PlayerModal from './components/PlayerModal';
 import Footer from './components/Footer';
 
@@ -50,6 +51,7 @@ export default function App() {
         <Timeline />
         <DocumentedEraSection />
         <TournamentsSection />
+        <TeamUSAFeature />
       </main>
 
       <Footer />
